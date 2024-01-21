@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=content.title%></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Caraousel Script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    
+
+      <!-- Caraousel Script -->
+</head>
+<style>
+    .font-roboto{
+        font-family: 'Roboto', sans-serif;
+    }
+    .font-ralewey{
+        font-family: 'Raleway', sans-serif;;
+    }
+    .font-roboto-400
+    {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    .font-inter{
+        font-family: 'Inter';
+    }
+    .font-poppins{
+        font-family: 'Poppins';
+    }
+    #menubar
+{
+    height: 10px;
+    transition: all ease-in-out;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+
+    
+</style>
+<body>
+    <nav class="z-50 ">
+        <div class="h-[2.25rem] bg-[#CC9B2B] "><a href="/admission-for-class-9-to-12"><p class="text-center p-1 text-xs lg:text-xl">Admission Open for Class VI, VII, VIII, IX, X, XI, XII & Repeater. Call@+91 9654272501</p></a></div>
+        <div class="lg:h-[6.25rem] h-fit  bg-white flex items-center flex-1 lg:justify-evenly justify-between p-3 lg:p-0">
+          <div>
+            <a href="/">
+           <img src="../public/images/gslogo.svg" class="h-10 lg:h-auto cursor-pointer ">
+          </a>
+          </div>
+          <div class=" space-x-8 font-roboto hidden lg:flex">
+             <a class="font-bold text-lg  cursor-pointer" href="/">Home</a>
+             
+             <div class="cursor-pointer  font-bold font-roboto flex flex-col relative ">
+                <div class="flex items-center space-x-2 " id="coursebutton">
+                <p class="text-lg">Courses</p>
+                <img src="../public/images/downarrow.svg" id="coursearrow">
+                </div>
+                <div class=" flex-col absolute top-6 bg-white w-56 p-2 space-y-5 shadow-xl border-1 border-gray-100 hidden z-50" id="courselist">
+                    <a href="/iit_jee">G-IIT JEE (Class 11 & 12)</a>
+                    <a href="/neet" >G-Medical (Class 11 & 12)</a>
+                    <a href="/arambh">Arambh - Class 9 to 10 </a>
+                    <a href="/Lil_genius">Lil Genius Class 6 to 8</a>
+                    <a href="/nda">G NDA</a>
+                 </div>
+             </div>
+             
+             <a class="font-bold text-lg cursor-pointer" href="/online_course">Online Courses</a>
+            
+             <a class="font-bold text-lg cursor-pointer" href="/blogs">Blog</a>
+             <div class="cursor-pointer  font-bold font-roboto flex flex-col relative ">
+              <div class="flex items-center space-x-2 " id="morebutton">
+              <p class="text-lg">More</p>
+              <img src="../public/images/downarrow.svg" id="morearrow">
+              </div>
+              <div class=" flex-col absolute top-10 bg-white w-64 p-2 space-y-2 shadow-xl border-1 border-gray-100 hidden z-50 px-5 overflow-y-scroll h-[20rem]" id="morelist">
+                  <a class="font-bold text-lg cursor-pointer" href="/answer_key">Download Answers</a>
+                  <a class="font-bold text-lg cursor-pointer" href="/skill_development">Skill Courses</a>
+                  <p>Competitive Exam Details</p>
+                  <div class=" flex flex-col space-y-2 pl-4 text-gray-500">
+                  <a href="/jee_main_exam">JEE Main Entrance Exam</a>
+                  <a href="/jee_advance_exam" >JEE Advance Entrance Exam</a>
+                  <a href="/neet_exam">NEET Entrance Exam </a>
+                  <a href="/ntse_exam">NTSE Exam</a>
+                  <a href="/mvpp_exam">MVPP</a>
+                  <a href="/cuet_exam">CUET</a>
+                  <a href="/nda_exam">NDA Entrance Exam</a>
+                </div>
+                <p><a href="/contact">Contact</a></p>
+                <p><a href="/about">About Us</a></p>
+               </div>
+           </div>
+          </div>
+          <div class="lg:space-x-4 items-center space-x-0">
+           
+            <% if ( username == undefined) { %>
+                <a href="/login" class="cursor-pointer">
+                  <img src="../public/images/useraccount.svg" class=" mr-7">
+                </a>
+                <%} else { %>
+                <div class="relative">
+                <div class="flex space-x-1">
+                  <p class=" font-roboto font-bold text-yellow-700 "><%=username%></p>
+                  <img src="../public/images/downarrow.svg" id="user_button">
+                </div>
+                <a href="/logout">
+                  <div class="bg-yellow-300 border-2 border-yellow-500 p-1 rounded-lg text-center absolute w-full z-50 hidden" id="logout_button">
+                    <p>Logout</p>
+                  </div>
+                </a>
+                </div>
+                <% } %>
+          </div>
+          <div class="lg:flex hidden">
+             <button class="bg-[#4D2C5E] rounded-full p-2 px-4 text-white font-roboto">
+                <a href="/download_app">
+                Download App
+            </a>
+             </button>
+          </div>
+           <!-- HamBurger Icon  -->
+           <div class="relative py-1 sm:max-w-xl  w-fit lg:hidden flex " id="hamburger">
+            <nav x-data="{ open: false }">
+                <button class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white" @click="open = !open">
+                    <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+       <!-- HamBurger Icon  -->
+        </div>
+       
+      <div class="lg:hidden bg-white" id="menubar">
+        <div class=" flex flex-col items-center space-y-2 hidden" id="menulist">
+            <a class="font-bold text-lg  cursor-pointer" href="/">Home</a>
+            <a class="font-bold text-lg cursor-pointer" href="/answer_key">Download</a>
+            <div class="cursor-pointer  font-bold font-roboto flex flex-col relative ">
+                <div class="flex items-center space-x-2 ">
+                <p class="text-lg">Courses</p>
+                <img src="../public/images/downarrow.svg" id="mobcoursebutton">
+                </div>
+                <div class="flex flex-col absolute top-6 bg-white w-56 p-2 space-y-5 shadow-xl border-1 border-gray-100 hidden z-50" id="mobcourselist">
+                    <a href="/iit_jee">G-IIT JEE (Class 11 & 12)</a>
+                    <a href="/neet">G-Medical (Class 11 & 12)</a>
+                    <a href="/arambh">Arambh - Class 9 to 10 </a>
+                    <a href="/Lil_genius">Lil Genius Class 6 to 8</a>
+                    <a href="/nda">G NDA</a>
+                 </div>
+             </div>
+            <a class="font-bold text-lg cursor-pointer" href="/online_course">Online Courses</a>
+            <a class="font-bold text-lg cursor-pointer" href="/skill_development">Skill Courses</a>
+            <a class="font-bold text-lg cursor-pointer" href="/blogs">Blog</a>
+            <div class="cursor-pointer  font-bold font-roboto flex flex-col relative ">
+              <div class="flex items-center space-x-2 " id="mobmorebutton">
+              <p class="text-lg">More</p>
+              <img src="../public/images/downarrow.svg" id="mobmorearrow">
+              </div>
+              <div class="flex flex-col absolute top-6 bg-white w-56 p-2 space-y-5 shadow-xl border-1 border-gray-100 hidden z-50 h-[20rem] overflow-y-scroll" id="mobmorelist">
+                <a class="font-bold text-lg cursor-pointer" href="/answer_key">Download Answers</a>
+                  <a class="font-bold text-lg cursor-pointer" href="/skill_development">Skill Courses</a>
+                  <p>Competitive Exam Details</p>
+                  <div class=" flex flex-col space-y-2 pl-4 text-gray-500">
+                  <a href="/jee_main_exam">JEE Main Entrance Exam</a>
+                  <a href="/jee_advance_exam" >JEE Advance Entrance Exam</a>
+                  <a href="/neet_exam">NEET Entrance Exam </a>
+                  <a href="/ntse_exam">NTSE Exam</a>
+                  <a href="/mvpp_exam">MVPP</a>
+                  <a href="/cuet_exam">CUET</a>
+                  <a href="/nda_exam">NDA Entrance Exam</a>
+                </div>
+                <p><a href="/contact">Contact</a></p>
+                <p><a href="/about">About Us</a></p>
+               </div>
+               </div>
+           </div>
+         </div>
+      </div>
+       
+    </nav>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        var menuflag = true;
+       document.getElementById('hamburger').addEventListener('click',()=>
+       {
+           if(menuflag==true)
+           {
+                    document.getElementById('menubar').style.height='15rem'
+                let menulist = document.getElementById('menulist')
+                setTimeout(()=>
+                {
+                    menulist.style.display='flex'
+                },600)
+                menuflag=false
+           }
+           else
+           {
+            document.getElementById('menubar').style.height='0rem'
+                let menulist = document.getElementById('menulist')
+                setTimeout(()=>
+                {
+                    menulist.style.display='none'
+                },100)
+                menuflag=true 
+           }
+           
+       })
+        document.getElementById('coursebutton').addEventListener('click',()=>
+        {
+          const courselist = document.getElementById('courselist')
+          var course_object = getComputedStyle(courselist);
+          if(course_object.display=='none')
+          {
+            courselist.style.display='flex'
+            document.getElementById('coursearrow').style.rotate='180deg'
+          }
+          else
+          {
+            courselist.style.display='none'
+            document.getElementById('coursearrow').style.rotate='360deg'
+
+          }
+        })
+
+        document.getElementById('morebutton').addEventListener('click',()=>
+        {
+          const courselist = document.getElementById('morelist')
+          var course_object = getComputedStyle(courselist);
+          if(course_object.display=='none')
+          {
+            courselist.style.display='flex'
+            document.getElementById('morearrow').style.rotate='180deg'
+          }
+          else
+          {
+            courselist.style.display='none'
+            document.getElementById('morearrow').style.rotate='360deg'
+
+          }
+        })
+        
+        document.getElementById('mobcoursebutton').addEventListener('click',()=>
+        {
+          const courselist = document.getElementById('mobcourselist')
+          var course_object = getComputedStyle(courselist);
+          if(course_object.display=='none')
+          {
+            courselist.style.display='flex'
+            document.getElementById('mobcoursebutton').style.rotate='180deg'
+          }
+          else
+          {
+            courselist.style.display='none'
+            document.getElementById('mobcoursebutton').style.rotate='360deg'
+
+          }
+        })
+
+        document.getElementById('mobmorebutton').addEventListener('click',()=>
+        {
+          const courselist = document.getElementById('mobmorelist')
+          var course_object = getComputedStyle(courselist);
+          if(course_object.display=='none')
+          {
+            courselist.style.display='flex'
+            document.getElementById('mobmorearrow').style.rotate='180deg'
+          }
+          else
+          {
+            courselist.style.display='none'
+            document.getElementById('mobmorearrow').style.rotate='360deg'
+
+          }
+        })
+                        $(document).ready(function(){
+                $("#user_button").click(function(){
+                    $("#logout_button").toggle();
+                });
+                });
+      
+    </script>

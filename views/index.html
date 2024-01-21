@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Navigation with AJAX and jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="/">Home</a></li>
+            <li><a href="#" id="/about">About</a></li>
+            <li><a href="#" id="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div id="content">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Function to load page content via AJAX
+            function loadPage(page) {
+                $.ajax({
+                    url: page , // Assuming you have HTML files named home.html, about.html, etc.
+                    method: "GET",
+                    dataType: "html",
+                    success: function(data) {
+                        $("#content").html(data);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error: " + error);
+                    }
+                });
+            }
+
+            // Load the initial page (e.g., "home.html")
+            loadPage("home");
+
+            // Handle navigation clicks
+            $("a").click(function(event) {
+                event.preventDefault(); // Prevent default link behavior
+
+                // Get the ID of the clicked link and load the corresponding page
+                var pageId = $(this).attr("id");
+                loadPage(pageId);
+            });
+        });
+    </script>
+</body>
+</html>

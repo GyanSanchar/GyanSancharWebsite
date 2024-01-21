@@ -1,0 +1,161 @@
+<%-include('partials/header')%>
+    <style>
+        .owl-carousel .nav-button {
+            height: 50px;
+            width: 25px;
+            cursor: pointer;
+            position: absolute;
+            top: 30% !important;
+        }
+
+        .owl-carousel .owl-prev.disabled,
+        .owl-carousel .owl-next.disabled {
+            pointer-events: none;
+            opacity: 0.25;
+        }
+
+        .owl-carousel .owl-prev {
+            left: -5%;
+        }
+
+        .owl-carousel .owl-next {
+            right: -5%;
+        }
+
+        .owl-theme .owl-nav [class*=owl-] {
+            color: #ffffff;
+            font-size: 39px;
+            background-color: rgba(0, 0, 0, 0) !important;
+            color: #C77E2E !important;
+            border-radius: 3px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .owl-carousel .owl-prev {
+                left: -7%;
+            }
+
+            .owl-carousel .owl-next {
+                right: -7%;
+            }
+
+        }
+    </style>
+    <section>
+        <div class="bg-[#FDF8EE] h-48 flex justify-evenly items-center py-10 lg:py-0">
+
+            <div class="bg-[#4D2C5E] w-fit text-white rounded-full px-4 py-2 text-2xl font-bold">
+                <button>
+                    Online Courses
+                </button>
+            </div>
+
+
+        </div>
+    </section>
+    <section>
+        <div class="p-5 lg:w-[65%] mx-auto">
+            <p class="lg:text-4xl text-2xl font-bold font-roboto text-center">GyanManthan - Online Courses by
+                GyanSanchar</p>
+            <p class="text-[#8A8A8A] leading-9 lg:text-xl text-lg text-center mt-5">
+                <a href="https://play.google.com/store/apps/details?id=co.alexis.dlbdl"
+                    class=" underline">GyanManthan</a> is an online platform for managing all needs of student at one
+                place. It's an user-friendly
+                app with amazing features like Self driven online courses for Skill and competitive exams, online
+                classes for academics and competitive exams, Class schedules, Recorded lectures, Assignments, Online
+                Test, etc...
+            </p>
+        </div>
+    </section>
+    <section>
+        <p class="lg:text-4xl text-2xl font-bold font-roboto text-center mt-8">GYANMANTHAN - ONLINE COURSE CATEGORIES
+        </p>
+        <div class="flex justify-evenly lg:flex-row flex-col mt-8">
+            <img src="../public/images/onlineskillcard.svg" class="w-96 h-96">
+            <img src="../public/images/onlinecpexamcard.svg" class="w-96 h-96">
+            <img src="../public/images/onlineacademiccard.svg" class="w-96 h-96">
+        </div>
+    </section>
+
+    <section>
+        <div class="flex justify-evenly flex-col lg:flex-row">
+            <div class="lg:w-[50%] p-2">
+                <a href="https://dlbdl.on-app.in/app/oc/75686/dlbdl" target="_blank">
+                    <img src="../public/images/vedicmath.svg" class="mx-auto">
+                </a>
+                <p class="p-2 lg:text-center text-justify font-roboto-400 text-[#8A8A8A] ">Vedic Mathematics is the
+                    heritage of India.
+                    It enhances calculation speed 10 times of the current
+                    level. This course is basically designed for the students of class 6th to 8th to enhance their
+                    calculation speed. This course will generate the understanding of Vedic Mathematics in students.</p>
+            </div>
+            <div class="lg:w-[50%] p-2">
+                <a href="https://dlbdl.on-app.in/app/oc/103611/dlbdl" target="_blank">
+                    <img src="../public/images/mindmap.svg" class="mx-auto">
+                </a>
+                <p class="p-2 lg:text-center text-justify font-roboto-400 text-[#8A8A8A]">
+                    Ths Course covers the basic overview of Mind Mapping. After completion of this course, you will be
+                    able to create mind maps for different entities.This course covers1. Introduction of Mind Mapping2.
+                    Visualization3. Creating Mind Map4. How it Works5. Using Mind Maps6. Tools
+                </p>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="lg:w-[50%] p-2">
+                <a href="https://dlbdl.on-app.in/app/oc/75686/dlbdl" target="_blank">
+                    <img src="../public/images/online_courses_MentalAptitude.svg" class="mx-auto">
+                </a>
+                <p class="p-2 lg:text-center text-justify font-roboto-400 text-[#8A8A8A] ">This Course covers different
+                    topics of Verbal reasoning.- Explanation along with examples for each category- Practice Questions
+                    for each category along with Answers and explanation- Practice Test for each category
+                    Target Exams: CUET, MVPP - Mukhyamantri Vigyan Pratibha Pariksha, NTSE - National Talent Search
+                    Examination</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <% for (let i=0; i < online_course.length; i++) { %>
+            <div>
+                <div class="text-center bg-black w-fit text-white mx-auto p-2 text-xl font-bold"><%=online_course[i].section_title%></div>
+                <div class="carousel owl-carousel owl-theme w-[90%]  h-[60%]  mx-auto mt-5 my-10">
+                    <% for (let j=0; j < online_course[i].course_data.length; j++) { %>
+                         <div class="card">
+                            <iframe width="350" height="315" src='<%=online_course[i].course_data[j].youtube_url%>'  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class=" "></iframe>
+                         </div>
+                    <% } %>
+                 </div> 
+                <% } %>
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').owlCarousel({
+                margin: 20,
+                loop: true,
+                autoplay: true,
+                autoplayTimeOut: 100,
+                autoplayHoverPause: true,
+                nav: true,
+                navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 3,
+                    }
+                }
+            });
+        })
+    </script>
+    <%-include('partials/footer')%>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS::Dashboard</title>
+     <!-- tailwind CDN -->
+     <script src="https://cdn.tailwindcss.com"></script>
+
+     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+
+<style>
+    body{
+        background-color: #FFE3AA;
+      }
+      .font-work{
+        font-family: 'Work Sans';
+      }
+      .font-work-clr{
+        font-family: 'Work Sans';
+        color: #7F8082;
+      }
+      .font-inter{
+        font-family: 'Inter';
+        color: #6F7384;
+      }
+      .box-1{
+        background: #FCF4DF;
+      }
+      .GS{
+        color: #CC9B2B;
+      }
+      .comments{
+        background: #FFEEE0;
+      }
+      .about{
+        background: #FAECD5;
+      }
+      .blogs{
+        background: #FCF4DF;
+      }
+      .plus{
+        color: #CC9B2B;
+        border: 1px solid #CC9B2B;
+      }
+</style>
+</head>
+<body>
+    
+ 
+    <div class="md:flex flex-row mt-4  md:pl-5">
+         <!-- left section -->  
+      
+       <%-include('partials/admin_side_bar')%>
+<!--RIGHT SECTION-->
+
+    <div class="text-center p-2 md:text-left w-[70%] h-full ml-8">
+         <div class="flex">
+            <div class="bg-light h-[3rem] w-[35rem] flex gap-2 px-3 rounded-full bg-white" >
+               <img src="../public/images/search.svg" alt="" class="w-[2rem] h-[1.5rem] mt-[0.8rem]" />
+               <input type="text" placeholder="Search"
+              class=" flex-1 focus:outline-none rounded-full ml-2" />
+          </div>
+         
+          <div class="h-12 w-12 bg-white mx-12 rounded-full">
+            <img src="../public/images/bell.svg" alt="" class="m-auto mt-[0.7rem]">
+          </div>
+      
+          <div class="flex ml-16">
+            <p class="mt-4 font-bold text-md">GyanSanchar</p>
+            <img src="../public/images/profile_img (1).svg" alt="" class="ml-4">
+          </div>
+
+        </div>
+
+        <div class="flex mt-2 ml">
+            <p class="text-slate-400 font-bold text-3xl ">Welcome,</p>
+            <p class="font-bold text-3xl GS">gyansanchar</p> 
+        </div>
+        <div>
+            <p class="font-semibold text-sm ">Unlocking the Full Potential of Your Website!</p>
+        </div>
+
+        <div class="flex mt-2">
+            <div class="h-48 w-48 ml-4  rounded-3xl bg-white">
+                <div class="flex mx-4 justify-between">
+                    <a href="/admin/edit_homepage" class="font-bold text-2xl">Home</a>
+                    <img src="../public/images/note.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="h-48 w-48 ml-8 rounded-3xl about">
+                <div class="flex mx-4 justify-between">
+                    <a href="" class="font-bold text-2xl">About Us</a>
+                    <img src="../public/images/note.svg" alt="">
+                </div>
+            </div>
+            <div class="h-48 w-48 ml-8 rounded-3xl blogs">
+                <div class="flex mx-4 justify-between">
+                    <a href="/admin/get_add_blog" class="font-bold text-2xl">Blogs</a>
+                    <img src="../public/images/note.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="h-48 w-48 ml-8 rounded-3xl blogs">
+                <div class="flex mx-4 justify-between">
+                    <a href="/admin/get_add_ranker" class="font-bold text-2xl">Add Rank Holders</a>
+                    <img src="../public/images/note.svg" alt="">
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="flex mt-2 ml-4">
+            <div class="h-68 w-96 bg-slate-300 rounded-2xl">
+                <p class="ml-4 font-bold">Overview</p>
+                <img src="../public/images/graph.svg" alt="">
+            </div>
+
+            <div class="h-68 w-80 ml-16 rounded-2xl comments">
+                <p class="font-bold ml-2 text-xl">Comments</p>
+                <div class="flex ml-2">
+                    <p>Vishal Chaurasia</p>
+                    <p class="ml-4 text-sm">08 August, 06:00 PM</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<%-include('partials/header')%>
+<style>
+    body{
+        background-image: linear-gradient(to right, rgba(255,0,0,0), #FFE3AA);
+          font-family: 'Inter';
+      
+      }
+      
+</style>
+     <!-- hero section -->
+     
+     <div class="md:flex flex-row md:pl-5 w-[100%] space-y-5">
+      <div class=" w-full lg:w-1/3">
+        <img src="../public/images/sign.png" alt=" image"   class="h-64 w-64 mx-auto md:mx-0 md:h-96 md:w-96 lg:h-[35rem] lg:w-[28rem] hidden md:block lg:block" />
+        <!-- <img src="../public/images/logo.svg" alt="" class="block md:hidden lg:hidden"> -->
+        <img src="../public/images/sign-mob.svg" alt=" image"   class="h-64 w-64 mx-auto md:mx-0 md:h-96 md:w-96 lg:h-[35rem] lg:w-[28rem] block md:hidden lg:hidden" />
+      </div>
+        <div class="space-y-5 p-2 md:text-left lg:w-1/2 lg:mx-24 mx-12 lg:mx-0 md:mx-0">
+           
+          <!-- <img src="../public/images/logo.svg" alt="" class="float-right hidden md:block lg:block"> -->
+
+          <div>
+            <h2 class="text-3xl mt-8 md:mt-24 lg:mt-24 font-bold">Sign up for </h2>
+          </div>
+          <div id="errormessage"></div>
+          <form action="/signup" method="post" id="myForm">
+            <label for="fname" class="font-bold">Name</label><br>
+            <input type="text" id="" name="name" value="" class="w-56 lg:w-72 bg-white border border-black rounded px-2"><br>
+            <label for="fname" class="font-bold mt-4">Mobile Number</label><br>
+            <input type="tel" id="" name="phone" value="" class="w-56 lg:w-72 bg-white border border-black rounded px-2"><br>
+            <label for="fname" class="font-bold mt-4">Email ID</label><br>
+            <input type="email" id="" name="email" value="" class="w-56 lg:w-72 bg-white border border-black rounded px-2"><br>
+            <label for="lname" class="font-bold">Password</label><br>
+            <input type="password" id="" name="password"  class="w-56 lg:w-72 bg-white border border-black rounded px-2"> <br>
+            <label for="fname" class="font-bold">Re-enter password</label><br>
+            <input type="text" id=""  value="" name="confirm_password" class="w-56 lg:w-72 bg-white border border-black rounded px-2"><br>
+            <button  class="bg-black w-48 text-white px-3 h-8 lg:h-12 md:h-12 lg:p-2 rounded-xl md:text-xl lg:text-xl mt-[20px] " type="submit" >
+                Sign up
+            </button> 
+          </form>
+         
+        <div>
+          <a class="">Already have an account? </a>
+          <a href="/login" class="underline font-bold">Sign in</a>
+        </div>
+          <p class="text-sm">By using Grain you agree to the <a href="/terms_and_conditions" class="underline font-bold">Terms And Conditions</a>  and <a href="/privacy_policy" class="underline font-bold">Privacy Policy</a> </p>
+       
+        </div>
+
+     </div>
+
+
+<script>
+  
+  $(document).ready(function()
+    {
+        $('#myForm').submit(function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Serialize the form data
+            const formData = $(this).serialize();
+
+            // Send an AJAX request to the server
+            $.ajax({
+                type: 'POST',
+                url: '/signup',
+                data: formData,
+                success: function (response) {
+            
+                    // Display the success message
+                    $('#myForm')[0].reset();
+                    Swal.fire(response)
+
+                    // Optionally, reset the form
+                   
+                },
+                error: function (error) {
+                    
+                    Swal.fire(error.responseJSON)
+                }
+            });
+        });
+    })
+</script>
+<%-include('partials/footer')%>
+
+

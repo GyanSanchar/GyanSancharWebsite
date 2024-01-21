@@ -1,0 +1,642 @@
+<%-include('partials/header')%>
+<style>
+
+  .font-roboto
+  {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+  }
+    /* slider */
+ .mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 40%;
+  width: auto;
+  margin-top: -22px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/*slider....end....CSS*/
+        body{
+            font-family: 'Roboto';
+        }
+        .blog{
+            background-color:  #FDF8EE;
+        }
+        .btn-blog{
+          background: #4D2C5E;
+        }
+       .why{
+        color: #CC9B2B;
+
+       }
+       .textcolor{
+        color: #8A8A8A;
+
+       }
+
+    </style>
+
+    <div class="blog h-52 w-full font-roboto"> 
+        <div class="flex  justify-evenly">
+          
+          <button class="h-16 w-48 mt-16 text-white text-3xl rounded-full btn-blog">About Us</button>
+        
+        </div> 
+      </div>
+
+      <!--ABT GS for desktop view-->
+      <div class=" mt-12 mx-24 text-lg lg:text-xl   flex flex-wrap hidden lg:block textcolor">
+       
+        <div class="text-center leading-normal font-roboto">
+        <p >GyanSanchar is a pioneer coaching providing services in online and Hybrid mode, which shapes your career by providing </p> 
+        <p > righteous knowledge, practice, and healthy environment to the aspirants of 
+          <b class="text-black"> 
+          <a href="/iit_jee" class="underline">IIT-JEE</a> , 
+          <a href="/neet" class="underline">NEET</a> , 
+          <a href="/nda" class="underline"> NDA,</a> 
+          <a href="" class="underline">CU-CET,</a> 
+          <a href="" class="underline"> NTSE,</a> 
+          Olympiad, School          and Board Exam </b> 
+          along with many other competitive exams. </p> 
+
+      </div> 
+        
+          <div class=" text-center mt-8 font-roboto">
+            <p > GyanSanchar not only focus on academics but also bridge the gaps through interpersonal skill development for students. </p> </div> 
+            
+          <div class="text-center mt-12 mx-auto font-roboto">
+           <p> 
+            <a href="https://play.google.com/store/apps/details?id=co.alexis.dlbdl" class="text-black underline font-bold">GyanManthan:</a>GyanSanchar App providing solutions and facilities to all needs of student.. </p>
+         
+           </div>
+
+        </div>
+
+<!--about GS for mobile view-->
+
+          <div class="textcolor text-lg mt-12 mx-12 text-justify block lg:hidden font-roboto">GyanSanchar is a pioneer coaching providing services in online and Hybrid mode, which shapes your career by providing righteous knowledge, practice, and healthy environment to the aspirants of <b class="text-black"> IIT-JEE, NEET, NDA, CU-CET, NTSE, Olympiad, School and Board Exam </b> along with many other competitive exams.
+
+            GyanSanchar not only focus on academics but also bridge the gaps through interpersonal skill development for students.
+  
+            <a href="https://play.google.com/store/apps/details?id=co.alexis.dlbdl" class="text-black underline">GyanManthan:</a> GyanSanchar App providing solutions and facilities to all needs of student..</div>
+
+<!--image section-->
+
+<div class=" md:flex flex-row  mt-12 lg:mx-24 ml-[1rem] mr-[3rem]  ">
+    <div class="h-full w-full lg:w-[50%]   items-center  mx-4">
+       
+       <img
+          src="../public/images/about_image_1.png"
+          alt=" image"
+          class="h-64 w-96 mx-auto px-auto py-4 md:mx-0 lg:ml-2 md:h-96 md:w-96 lg:h-[25rem] lg:w-[48rem]  items-center "
+        />
+       
+   
+    </div>
+    <div class="h-full w-full lg:w-[50%] mt-4 lg:mt-0 md:mt-0 items-center mx-4">
+       
+        <img
+          src="../public/images/about_image_2.png"
+          alt=" image"
+          class="h-64 w-96 mx-auto px-auto py-4 md:mx-0 lg:ml-2 md:h-96 md:w-96 lg:h-[25rem] lg:w-[48rem]"
+        />
+       
+     </div>
+  </div>
+
+     <!--WHY  ????????--> 
+    <div class="mx-8 md:mx-24 lg:mx-24 mt-8 font-roboto">
+      <p class="text-2xl lg:text-5xl font-extrabold why">Why GyanSanchar?</p>
+    
+      <div class=" text-lg  leading-7 lg:leading-loose justify textcolor">
+         <p class="mt-8">Education is very important part in life of every individual. Quality education help us to groom our skills and find new ways to enhance ourselves. </p>
+         <p>Our Vision </p>  
+         <p>Building efficient and productive learning avenues for everyone.</p> 
+          <ul>Our Mission</ul> 
+            <li>Digitizing the learning process, content and experiences.</li>
+             <li>Making learning available, accessible and affordable to everyone.</li> 
+        <p>Highly qualified and experienced Faculties </p>  
+        <p>We have highly educated faculties and trainers in our staff who have professional experience. They provide   quality education along with mentoring students, which gives you peace of mind. </p>  
+         <p> Skill Development </p>
+        <p> Gyan Sanchar understand each student is different, hence we bridge the gap through interpersonal skill        development.</p>
+    </div>
+
+    </div>
+
+
+     <!--girl-->
+
+     <div class=" md:flex flex-row  mt-12 lg:mx-4 ml-[1rem] mr-[3rem]  ">
+        <div class="h-full w-full lg:w-1/2   items-center relative mx-4">
+           
+           <img
+              src="../public/images/about_card1.svg"
+              alt="card image"
+              class="h-64 w-96 mx-auto px-auto py-4 md:mx-0 lg:ml-2 md:h-96 md:w-96 lg:h-[30rem] lg:w-[35rem]  items-center "  />
+            
+        </div>
+
+
+        <div class="h-full w-full lg:w-[50rem] mt-4 lg:mt-0 md:mt-0 items-center mx-4 font-roboto">
+           
+            <div class="text-2xl lg:text-5xl font-extrabold why">Our Program Features</div>
+            <ul class="textcolor text-xl mt-2">To download our App, <a href="https://play.google.com/store/apps/details?id=co.alexis.dlbdl" class="text-black underline">click here</a>  </ul>
+       
+            <div class=" px-4 textcolor text-lg justify">
+               <li class="mt-2"> Coaching available in Online and Hybrid mode.</li>
+                
+               <li class="mt-2">  Provide Comprehensive study material, covering deep concepts with suitable examples, and exercise (different difficulty level). </li>
+                
+               <li class="mt-2">  DBS (daily brain storming) concept is followed with complete exercise to keep student connected.  </li>
+                
+               <li class="mt-2">  Online topic wise and complete practice test based on exam patterns along with performance report. </li>
+                
+               <li class="mt-2">  Recorded lectures for future reference. </li>
+                
+               <li class="mt-2">  Interpersonal development to bridge gaps in competency. </li>
+                
+               <li class="mt-2">  Preparation for board exams </li>
+                
+               <li class="mt-2">  Performance Analysis and Mentoring </li>
+            </div>
+          </div>
+
+    </div>
+    <!--leadership -->
+
+    <div class="p-10 space-y-5 lg:space-y-10 lg:p-16  lg:mt-16 font-roboto">
+      <p class="text-center text-xl  font-extrabold sm:text-2xl md:text-3xl h-8 lg:text-4xl">
+        GYANSANCHAR TEAM
+      </p>
+    </div>
+
+
+    <div class=" md:flex flex-row  mt-12 lg:mx-4 ml-[1rem] mr-[3rem]  font-roboto">
+    
+      <div class="h-full w-full lg:w-[40rem] mt-4 lg:mt-0 md:mt-0 items-center mx-4 lg:mx-12  font-roboto">
+         
+        <p class=" text-lg  font-bold sm:text-2xl md:text-3xl h-8 lg:text-3xl">
+          Prof. Rajesh Sahay (Chief Mentor)
+        </p>
+        <p class="text-md   sm:text-2xl md:text-3xl  lg:text-2xl mt-4">
+          <b class="text-[#383838]"> Founder Chairman: </b>Heirank Business School   <br>
+          <b class="text-[#383838]">MD & CEO:</b>  CAT7 <br>
+          <b class="text-[#383838]">Member:</b>  NMA, AIMA <br>
+          <b class="text-[#383838]">Academic Advisor:</b>  Manhattan Institute of Management, USA <br>
+          <b class="text-[#383838]">Former Director: </b> AIIT, ARCIT (AMITY) <br>
+        </p>
+        <p class="text-[#383838] text-md mt-8 font-roboto">PROF. RAJESH SAHAY, an MBA has served both Corporate and Academia for more than 25 years. <br>
+          He worked as a Founder Director of Higher Education of AMITY Grp. <br>
+          In 2006, he started venture Hierank Business School, approved by AICTE , NCTE with more than 1100 students and Placement record of upto 88%. <br>
+          Awarded GEM OF INDIA AWARD by LORD SWARAJ PAUL (2007) at LONDON for his achievement in the field of Education.
+        </p>
+      </div>
+
+      <div class="h-full w-full lg:w-1/2   items-center relative mx-4">
+         
+         <img
+            src="../public/images/about_team_mainCEO.svg"
+            alt="card image"
+            class="h-64 w-96 mx-auto px-auto py-4 md:mx-0 lg:ml-2 md:h-96 md:w-96 lg:h-[25rem] lg:w-[35rem]  items-center "  />
+          
+      </div>
+  </div>
+  
+<!---------------------------------cards for desktop view-------------------->
+
+    <div class=" my-12   mx-auto md:px-12 hidden lg:block font-roboto">
+      <div class="flex flex-wrap justify-center">
+          <!-- Card(1) -->
+          <div class="my-1  px-12 w-full md:w-48% lg:my-4 lg:w-1/3  ">
+  
+              <!--Image Artilce-->
+              <div class="overflow-hidden  grid justify-items-center">
+  
+                  <div >
+                      <img alt="cards1" class="block rounded" src="../public/images/about_team_subhash.svg"> 
+                  </div>
+  
+                  <div class=" items-center justify-between pt-2  md:py-4">
+                     
+                          <p class="text-xl font-extrabold">Mr. Subhash Sharma</p> 
+                          <p class="text-sm text-[#5F6980] leading-normal">The founder of the GyanSanchar , taken an initiative to make a career-oriented platform to learn the aspects of competitive exams along with interpersonal development . He is SME for Physics and Mathematics 
+                            Mr. Sharma is B.Tech (Mech.) and has worked as an Associate General Manager in corporate for 10+ years . He also took high-scaled seminars for career counselling in more than 150 schools.</p>
+                  </div>                         
+                          
+              </div>
+              <!-- END Article -->
+          </div>
+   
+         <!-- Card(2) -->
+         <div class="my-1  px-12 w-full md:w-48% lg:my-4 lg:w-1/3  ">
+  
+          <!--Image Artilce-->
+          <div class="overflow-hidden  grid justify-items-center">
+
+              <div >
+                  <img alt="cards1" class="block rounded" src="../public/images/about_team_bhupesh.svg"> 
+              </div>
+
+              <div class=" items-center justify-between pt-2  md:py-4">
+                 
+                      <p class="text-xl font-extrabold">Mr. Bhupesh Raj Vaid</p> 
+                      <p class="text-[#3E3E59] text-md pt-2 font-bold">Academics - HOD Chemistry</p>
+                      <p class="text-sm text-[#5F6980] pt-2 leading-normal">Masters in Chemistry from DU , with over 6 years of experience in Mentoring Students for JEE/ NEET students.</p>
+              </div>                         
+                      
+          </div>
+          <!-- END Article -->
+      </div>
+      <!-- END Card(2) -->
+  
+        <!-- Card(3) -->
+        <div class="my-1  px-12 w-full md:w-48% lg:my-4 lg:w-1/3    ">
+  
+          <!--Image Artilce-->
+          <div class="overflow-hidden  grid justify-items-center">
+
+              <div >
+                  <img alt="cards1" class="block rounded" src="../public/images/about_team_syed.svg"> 
+              </div>
+
+              <div class=" items-center justify-between pt-2  md:py-4">
+                 
+                      <p class="text-xl font-extrabold">Mr. Syed Hamza Ghazi</p> 
+                      <p class="text-[#3E3E59] text-md pt-2 font-bold">Academics - HOD Mathematics</p>
+                      <p class="text-sm text-[#5F6980] pt-2 leading-normal">Masters in Mathematics from AMU with over 15 years of experience in mentoring students for JEE Mains and Advance.</p>
+              </div>                         
+                      
+          </div>
+          <!-- END Article -->
+      </div>
+      <!-- END Card(3) -->
+  
+          <!-- Card(4) -->
+          <div class="my-1  px-12 w-full md:w-48% lg:my-4 lg:w-1/3  ">
+  
+            <!--Image Artilce-->
+            <div class="overflow-hidden  grid justify-items-center">
+  
+                <div >
+                    <img alt="cards1" class="block rounded" src="../public/images/about_team_Tanya.svg"> 
+                </div>
+  
+                <div class=" items-center justify-between pt-2  md:py-4">
+                   
+                        <p class="text-xl font-extrabold">Ms. Tanya Gupta</p> 
+                        <p class="text-[#3E3E59] text-md pt-2 font-bold">Academics - HOD Biology</p>
+                        <p class="text-sm text-[#5F6980] pt-2 leading-normal">Degree in Bio Technology with more than 4 years of rich experience of teaching for NEET and University Entrance.</p>
+                </div>                         
+                        
+            </div>
+            <!-- END Article -->
+        </div>
+        <!-- END Card(4) -->
+
+       <!-- Card(5) -->
+       <div class="my-1  px-12 w-full md:w-48% lg:my-4 lg:w-1/3  ">
+  
+        <!--Image Artilce-->
+        <div class="overflow-hidden  grid justify-items-center">
+
+            <div >
+                <img alt="cards1" class="block rounded" src="../public/images/about_team_vikalp.svg"> 
+            </div>
+
+            <div class=" items-center justify-between pt-2  md:py-4">
+               
+                    <p class="text-xl font-extrabold">Mr. Vikalp Dubey</p> 
+                    <p class="text-[#3E3E59] text-md pt-2 font-bold">Content Design</p>
+                    <p class="text-sm text-[#5F6980] pt-2 leading-normal">A mechinal engineer with 10 + years of corporate experience. He is looking after creative content designing for GyanSanchar. He is a author and has written many motivational content for students.</p>
+            </div>                         
+                    
+        </div>
+        <!-- END Article -->
+    </div>
+    <!-- END Card(5) -->
+
+       <!-- Card(6) -->
+       <div class="my-1  px-12 w-full md:w-48% lg:my-4 lg:w-1/3  ">
+  
+        <!--Image Artilce-->
+        <div class="overflow-hidden  grid justify-items-center">
+
+            <div >
+                <img alt="cards1" class="block rounded" src="../public/images/about_team_pinkey.svg"> 
+            </div>
+
+            <div class=" items-center justify-between pt-2  md:py-4">
+               
+                    <p class="text-xl font-extrabold">Ms. Pinkey Sharma</p> 
+                    <p class="text-[#3E3E59] text-md pt-2 font-bold">Mentor - IT Technical</p>
+                    <p class="text-sm text-[#5F6980] pt-2 leading-normal">A software engineer , MCA from NIT having more than 15 years of corporate experience She mentor for digital and IT requirements.</p>
+            </div>                         
+                    
+        </div>
+        <!-- END Article -->
+    </div>
+    <!-- END Card(6) -->
+
+      </div>
+    </div>
+    
+
+<!-- ----------------------cards for medium and mobile view------------------------------->
+
+      <div class="mb-16 block lg:hidden" >
+       
+      <div class="slideshow-container">
+          
+          <div class="mySlides fade">
+            <div class="flex">
+           <!-- Card(1) -->
+       <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+        <!--Image Artilce-->
+        <div class="overflow-hidden rounded-lg grid justify-items-center">
+
+            <div >
+                <img alt="card3" class="block h-[8rem] md:h-[12rem] w-50% rounded" src="../public/images/about_team_mainCEO.svg"> 
+            </div>
+
+            <div class=" items-center justify-between pt-2  md:py-4">
+                   
+              
+              <p class="text-lg md:text-xl font-extrabold">Prof. Rajesh Sahay </p> 
+              <p class="text-sm  md:text-xl font-extrabold text-center">(Chief Mentor)</p>
+      </div>  
+        </div>
+        <!-- END Article -->
+    </div>
+    <!-- END Card(1) -->
+
+    <!-- Card(2) -->
+    <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+      <!--Image Artilce-->
+      <div class="overflow-hidden rounded-lg grid justify-items-center">
+
+          <div >
+              <img alt="card3" class="block h-[8rem] md:h-[12rem]  w-50% rounded" src="../public/images/about_team_subhash.svg"> 
+          </div>
+
+          <div class=" items-center justify-between pt-2  md:py-4">
+  
+            <p class="text-lg  md:text-xl font-extrabold text-center">Mr. Subhash Sharma </p> 
+            <p class="text-sm  md:text-xl textcolor text-center">Founder of the GyanSanchar</p>
+    </div>  
+      </div>
+      
+      <!-- END Article -->
+  </div>
+  <!-- END Card(2) -->
+          </div>
+  </div>
+          
+
+
+  <!--slide fade 2-->
+          <div class="mySlides fade">
+            <div class="flex">
+              <!-- Card(3) -->
+          <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+           <!--Image Artilce-->
+           <div class="overflow-hidden rounded-lg grid justify-items-center">
+   
+               <div >
+                   <img alt="card3" class="block h-[8rem] md:h-[12rem] w-50% rounded" src="../public/images/about_team_bhupesh.svg"> 
+               </div>
+   
+               <div class=" items-center justify-between pt-2  md:py-4">
+                      
+                    
+                <p class="text-lg  font-extrabold text-center">Mr. Bhupesh Raj Vaid  </p> 
+                <p class="text-sm  textcolor text-center">Academics - HOD Chemistry</p>
+         </div>  
+           </div>
+           <!-- END Article -->
+       </div>
+       <!-- END Card(3) -->
+   
+       <!-- Card(4) -->
+       <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+         <!--Image Artilce-->
+         <div class="overflow-hidden rounded-lg grid justify-items-center">
+   
+             <div >
+                 <img alt="card3" class="block h-[8rem] md:h-[12rem] w-50% rounded" src="../public/images/about_team_syed.svg"> 
+             </div>
+   
+             <div class=" items-center justify-between pt-2  md:py-4">
+                  
+              <p class="text-lg  md:text-xl  font-extrabold text-center">Mr. Syed Hamza Ghazi</p> 
+              <p class="text-sm md:text-xl   textcolor text-center">Academics -HOD  Chemistry</p>
+       </div>  
+         </div>
+         
+         <!-- END Article -->
+     </div>
+     <!-- END Card(6) -->
+             </div>
+     </div>
+             
+         
+  
+          <div class="mySlides fade">
+            <div class="flex">
+              <!-- Card(5) -->
+          <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+           <!--Image Artilce-->
+           <div class="overflow-hidden rounded-lg grid justify-items-center">
+   
+               <div >
+                   <img alt="card3" class="block h-[8rem] md:h-[12rem]  w-50% rounded" src="../public/images/about_team_Tanya.svg"> 
+               </div>
+   
+               <div class=" items-center justify-between pt-2  md:py-4">
+                      
+                 
+              <p class="text-lg  md:text-xl font-extrabold text-center">Ms. Tanya Gupta              </p> 
+              <p class="text-sm  md:text-xl  textcolor text-center">Academics - HOD Biology
+              </p>
+         </div>  
+           </div>
+           <!-- END Article -->
+       </div>
+       <!-- END Card(5) -->
+   
+       <!-- Card(6) -->
+       <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+         <!--Image Artilce-->
+         <div class="overflow-hidden rounded-lg grid justify-items-center">
+   
+             <div >
+                 <img alt="card3" class="block h-[8rem] md:h-[12rem]  w-50% rounded" src="../public/images/about_team_vikalp.svg"> 
+             </div>
+   
+             <div class=" items-center justify-between pt-2  md:py-4">
+                    
+               <p class="text-lg  md:text-xl  font-extrabold text-center">Mr. Vikalp Dubey</p> 
+               <p class="text-sm   md:text-xl  textcolor text-center">Content Design</p>
+       </div>  
+         </div>
+         
+         <!-- END Article -->
+     </div>
+     <!-- END Card(6) -->
+             </div>
+     </div>
+             
+         
+          <div class="mySlides fade">
+            <div class="flex">
+              <!-- Card(7) -->
+          <div class="my-1 px-1 w-full md:w-48%  lg:my-4 lg:px-4 lg:w-1/4">
+           <!--Image Artilce-->
+           <div class="overflow-hidden rounded-lg grid justify-items-center">
+   
+               <div >
+                   <img alt="card3" class="block h-[8rem] md:h-[12rem]  w-50% rounded" src="../public/images/about_team_pinkey.svg"> 
+               </div>
+   
+               <div class=" items-center justify-between pt-2  md:py-4">
+                      
+                 <p class="text-xl md:text-xl  font-extrabold text-center">Ms. Pinkey Sharma</p> 
+                 <p class="text-sm  md:text-xl  textcolor text-center">Mentor - IT Technical</p>
+         </div>  
+           </div>
+           <!-- END Article -->
+       </div>
+       <!-- END Card(7) -->
+   
+      
+             </div>
+   
+             
+          </div>
+  
+          <a class="prev cursor-pointer p-2 rounded-lg m-2" onclick="plusSlides(-1)" >❮</a >
+          <a class="next cursor-pointer   p-2 rounded-lg m-2" onclick="plusSlides(1)" >❯</a>
+        </div>
+        <br />
+  
+        <div style="text-align: center">
+          <span class="dot " onclick="currentSlide(1)"></span>
+          <span class="dot " onclick="currentSlide(2)"></span>
+          <span class="dot " onclick="currentSlide(3)"></span>
+          <span class="dot " onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+<script>
+  // slider
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+ }
+</script>
+<%-include('partials/footer')%>

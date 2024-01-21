@@ -1,0 +1,144 @@
+<%-include('partials/header')%>
+<style>
+    body{
+        font-family: 'Poppins';
+    }
+    .blog{
+        background-color:  #FDF8EE;
+    }
+    .btn-blog{
+      background: #4D2C5E;
+    }
+    .submit{
+        background: #FF7426;
+        
+    }
+    .form{
+        background: #FBEFCE;
+
+    }
+
+   
+</style>
+
+ 
+    <!--section 1-->
+    <div class="blog h-52 w-full"> 
+      <div class="flex  justify-evenly">
+        <button class="h-12 w-auto px-4 mt-16 text-white  text-3xl rounded-full btn-blog">Contact Us</button>
+      </div> 
+    </div>
+
+    <!--sectiolnc 2-->
+    <div class="text-center mt-8 ">
+        <p class="mx-4 text-lg md:text-xl lg:text-2xl text-[#CC9B2B] font-bold">REGISTER NOW TO GET UPDATES FOR FREE DEMO CLASS</p>
+        <p class="font-bold text-md md:text-xl lg:text-3xl mx-4 lg:mx-32 mt-4">Register for Free Demo Class - Foundation (Class 9 & 10), JEE / NEET (Class 11, Class 12 and Dropper)</p>
+    </div>
+
+   
+
+    <!--form -->
+
+    <div class="w-full mt-8 md:text-left ">
+        <div class="h-auto space-y-5 lg:mx-12   pt-4 mx-4 rounded-lg shadow px-4 form" >
+          <form class="space-y-6 form" id="admission_form">
+           
+            <div>
+              <label for="name" class="block mb-2 mt-2 text-lg text-black bold">Name*</label >
+              <input
+                type="name"
+                name="name"
+                class=" text-black text-sm rounded-full block w-full p-2.5"
+                required
+              />
+              <input type="hidden" name="page_name" value="ADMISSION FORMS">
+              <input type="hidden" name="page_id" value="admission_top_bar">
+            </div>
+            <div>
+                <label for="email" class="block mb-2 text-lg text-black bold"
+                  >Mobile Number*</label >
+                <input
+                  type="tel"
+                  name="mobile"
+                  class=" text-black text-sm rounded-full block w-full p-2.5"
+                  required  />
+              </div>
+              
+            <div>
+              <label for="email" class="block mb-2 text-lg text-black bold"
+                >Email*</label >
+              <input
+                type="email"
+                name="email"
+                class=" text-black text-sm rounded-full block w-full p-2.5"
+                required  />
+            </div>
+            
+            <div>
+              <label for="msgg" class="block mb-2 text-lg text-black bold"
+                >Message*</label>
+                <textarea  name="message" class="text-black text-sm rounded-xl block w-full h-36 px-2">
+
+                </textarea>
+
+            </div>
+
+            <div class="flex">
+                <input type="checkbox" name="" class="mx-4 w-4" id="email_checkbox">
+                <label for="" class=""> &nbsp; Sign up for our email list for updates, promotions, and more.</label>
+            </div>
+           
+            <div class=" ">
+              <button class="bg-orange-500  text-white font-bold text-xl mt-8  py-2 px-10 rounded-full " type="submit" >
+                Submit
+              </button>
+            </div>
+
+            <br />
+          </form>
+        </div>
+      </div>
+
+    <!--form sec end-->
+   
+    <div class="flex  justify-evenly">
+        <button class="h-12 w-auto px-4 mt-16 text-white text-xl rounded-full bg-[#455A64] flex py-2">
+            <img src="../public/images/Form_whatsapp_Icon.svg" alt="" class="mx-2 pt-[0.3rem]">
+            Message us on WhatsApp</button>
+      </div> 
+
+      
+
+  <script>
+    $(document).ready(()=>
+     {
+      
+         $('#admission_form').submit(()=>
+         {
+
+               event.preventDefault();
+                            
+               if($('#email_checkbox').is(':checked'))
+               {
+                  const form_data = $('#admission_form').serialize();
+                  $.ajax({
+                      type: 'POST',
+                      url: '/submit_form',
+                      data: form_data,
+                      success: function (response) {
+                          $('#admission_form')[0].reset();
+                          Swal.fire(response)
+                      },
+                      error: function (error) {
+                          Swal.fire(error.responseJSON)
+                      }
+                  });
+               }
+               else
+               {
+                Swal.fire('Please Tick the checkbox')
+               }
+         })
+     })
+  </script>
+<%-include('partials/footer')%>

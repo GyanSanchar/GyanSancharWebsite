@@ -1,0 +1,299 @@
+<%-include('partials/header')%>
+<style>
+    
+    .owl-carousel .owl-prev:hover {
+        background-color: #ffffff !important;
+        color: orangered !important;
+    }
+
+    .owl-carousel .owl-next:hover {
+        background-color: #ffffff !important;
+        color: orangered !important;
+    }
+
+    .owl-carousel .nav-button {
+        height: 50px;
+        width: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 30% !important;
+    }
+
+    .owl-carousel .owl-prev.disabled,
+    .owl-carousel .owl-next.disabled {
+        pointer-events: none;
+        opacity: 0.25;
+    }
+
+    .owl-carousel .owl-prev {
+        left: -5%;
+    }
+
+    .owl-carousel .owl-next {
+        right: -5%;
+    }
+
+    .owl-theme .owl-nav [class*=owl-] {
+        color: #ffffff;
+        font-size: 60px;
+        background-color: white;
+        color: orangered;
+        border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+        .owl-carousel .owl-prev {
+        left: -10%;
+    }
+
+    .owl-carousel .owl-next {
+        right: -10%;
+    }
+    }
+    
+    .submit{
+        background: #FF7426;
+        
+    }
+    .form{
+        background-image: linear-gradient(to right,#FFE3AA , rgba(255,0,0,0));
+    }
+</style>
+<section class="relative">
+     <div class="lg:px-16 lg:p-5  flex lg:justify-evenly lg:flex-row flex-col-reverse lg:w-[92%] mx-auto">
+         <div class="lg:w-[60%] space-y-2 px-5">
+             <p class="font-extrabold font-roboto lg:text-3xl text-2xl">G-IIT JEE Foundation, Target and Bridge course for Class 11 and Class 12 (Online & Hybrid coaching)
+             </p>
+             <p class="lg:text-lg font-roboto-400 text-[#8A8A8A] pt-4">
+                The objective of G-IIT JEE is to train and mentor student's for <span class="text-yellow-500 underline"><a href="/jee_main_exam">IIT JEE Mains</a></span> and <a href="/jee_advance_exam" class="text-yellow-500 underline">JEE Advance </a>examination along with <a href="/cuet_exam" class="font-bold text-yellow-600 underline">CUET</a>  <b>school and board exams</b>. 
+                 With this preparation, student's can also appear for BITSAT and any other regional pre engineering test.
+                 <br>
+                 GyanSanchar study pattern is based on the earlier age Gurukul system. Our gurus acts as a mentor to
+                 each student and not only teach but also provide study plan for self-study.
+                 <br>
+                 Features:
+                 <div class="mx-4 lg:text-lg font-roboto-400 text-[#8A8A8A]">
+                    <ul>
+                  <li style="list-style: disc; list-style-position: outside;">Coaching available in <b class="text-gray-700">Online</b> and <b class="text-gray-700">Hybrid</b> mode.</li>
+                
+                  <li style="list-style: disc;  list-style-position:outside;">Provide <b class="text-gray-700">Comprehensive study material</b>, covering deep concepts with suitable examples, and exercise
+                 (different difficulty level).</li>
+                 <li style="list-style: disc;  list-style-position:outside;">
+                 DBS (daily <b class="text-gray-700">brain storming</b>) concept is followed with complete exercise to keep student connected.
+                 </li>
+                 <li style="list-style: disc;  list-style-position:outside;">
+                 Online topic wise and complete <b class="text-gray-700">practice test</b> based on exam patterns along with performance report.
+                 </li>
+                 <li style="list-style: disc;  list-style-position:outside;">
+                 <b class="text-gray-700">Recorded lectures</b> for future reference.
+                 </li>
+                 <li style="list-style: disc;  list-style-position:outside;">
+                 Solutions for prv. years IIT mains and advance examination questions.
+                 </li>
+                 <li style="list-style: disc;  list-style-position:outside;">
+                 <b class="text-gray-700">Interpersonal development</b> to bridge gaps in competency.
+                 </li>
+                 <li style="list-style: disc;  list-style-position:outside;">
+                 Preparation for board exams
+                 </li>
+                    </ul>
+             </div>
+                 <p class="lg:text-lg font-roboto-400">For JEE main Exam details, Paper and exam pattern,<a class="underline text-yellow-700" href="/jee_main_exam">click here</a> </p>
+                 <p class="lg:text-lg font-roboto-400">For JEE Advance Exam details, Paper and exam pattern, <a class="underline text-yellow-700" href="/jee_advance_exam">click here</a></p>
+             </p>
+             <a href="/admission_jee_mains">
+             <div class="bg-[#4D2C5E] text-white rounded-full px-4 py-2 font-semibold  w-fit"><p>SIGN UP FOR FREE</p></div>
+             </a>
+         </div>
+         <div class="lg:w-[40%] w-[95%] h-[95%] mx-auto lg:mx-0">
+             <img src="../public/images/iitjeecard.svg" class="mx-auto">
+         </div>
+         
+     </div>
+     <img src="../public/images/courseillus.svg" class="absolute right-1 bottom-1 -z-10 hidden lg:flex">
+ </section>
+
+ <section>
+     <p class="text-3xl font-bold text-center font-roboto mt-10">G- IIT JEE MAINS | ADVANCE | CLASS 11 | CLASS 12 COACHING
+     </p>
+     <!-- <p class="text-2xl text-center">
+         Lorem Ipsum is simply dummy text of the printing.
+     </p> -->
+     <div class="rankers-carousel owl-carousel owl-theme lg:w-[80%] space-x-8 mx-auto w-[80%] relative">
+        <div class="p-4 border-2 border-gray-400 shadow-xl rounded-lg  space-y-2  relative my-5" >
+            <img src="../public/images/jeefor12.svg" class="mx-auto cursor-pointer" data-modal-target="formModal" data-modal-toggle="formModal">
+             </a>
+            <p class="text-center text-2xl font-bold">IIT JEE for Class 12 Pass Out</p>
+            <p class="text-center">This course covers coaching and assessment of 670 hrs, which includes 90 hrs. of
+                session for doubt
+                clearing. Its divided in two phases.</p>
+            <div id="moretext1" class="hidden">
+                <p class="text-center">
+                <p class="text-center font-semibold">Phase -1 (340 hrs.) :</p>
+                <p class="text-center">
+                    The entire syllabus for Physics , Chemistry and Mathematics of class 12th will be completed at board
+                    and mains level. Topic wise test, Part test and Full tests on mains level will be conducted
+                    periodically.
+                    It covers 280 hrs. of coaching and 60 hrs. of assessment.
+                </p>
+                <br>
+                <p class="text-center font-semibold">Phase -2 (240 hrs.) :</p>
+                <p class="text-center">
+                    Complete revision of Physics, Chemistry and Mathematics of class 11th for mains will be done. Part
+                    test and full test will be conducted periodically,
+                    It covers 180 hrs. of coaching and 60 hrs. of assessment.
+                </p>
+                </p>
+            </div>
+            <div class="border-2 border-gray-300 absolute  mx-auto left-0 right-0 bg-white px-2 h-fit w-fit -bottom-4 cursor-pointer"
+                id="showbutton1" onclick="showhidetext(1)">
+                <p id="buttontext1">Show More</p>
+            </div>
+        </div>
+
+        <div class="p-4 border-2 border-gray-400 shadow-xl rounded-lg  space-y-2  relative my-5" >
+            <img src="../public/images/target12.svg" class="mx-auto cursor-pointer" data-modal-target="formModal" data-modal-toggle="formModal">
+             </a>
+            <p class="text-center text-2xl font-bold">IIT JEE Target Course for Class 12</p>
+            <p class="text-center">This course covers coaching and assessment of 670 hrs, which includes 90 hrs. of
+                session for doubt
+                clearing. Its divided in two phases.</p>
+            <div id="moretext2" class="hidden">
+                <p class="text-center">
+                <p class="text-center font-semibold">Phase -1 (340 hrs.) :</p>
+                <p class="text-center">
+                    The entire syllabus for Physics , Chemistry and Mathematics of class 12th will be completed at board
+                    and mains level. Topic wise test, Part test and Full tests on mains level will be conducted
+                    periodically.
+                    It covers 280 hrs. of coaching and 60 hrs. of assessment.
+                </p>
+                <br>
+                <p class="text-center font-semibold">Phase -2 (240 hrs.) :</p>
+                <p class="text-center">
+                    Complete revision of Physics, Chemistry and Mathematics of class 11th for mains will be done. Part
+                    test and full test will be conducted periodically,
+                    It covers 180 hrs. of coaching and 60 hrs. of assessment.
+                </p>
+                <p>Note:Preparation for Board Exam will also be taken care</p>
+                </p>
+            </div>
+            <div class="border-2 border-gray-300 absolute  mx-auto left-0 right-0 bg-white px-2 h-fit w-fit -bottom-4 cursor-pointer"
+                id="showbutton2" onclick="showhidetext(2)">
+                <p id="buttontext2">Show More</p>
+            </div>
+        </div>
+
+
+        <div class="p-4 border-2 border-gray-400 shadow-xl rounded-lg  space-y-2  relative my-5" >
+            <img src="../public/images/iitfoundation.svg" class="mx-auto cursor-pointer" data-modal-target="formModal" data-modal-toggle="formModal">
+            <p class="text-center text-2xl font-bold">IIT JEE Foundation for Class 11</p>
+            <p class="text-center">IIT JEE Foundation course is a two year foundation program for JEE , Class 11th
+                students can enroll for it. It covers school level coverage as well. </p>
+            <div id="moretext3" class="hidden">
+                <p class="text-center">
+                <p>The course covers coaching and
+                assessment of 1340 hrs., which includes 90 hrs. of session for doubt clearing in each year.</p>
+                <p class="text-center font-semibold">Year 1: Class 11 (670 hrs.) :</p>
+                <p class="text-center">
+                    The entire syllabus for Physics , Chemistry and Mathematics of class 11th will be covered from
+                    basics to the JEE advance level. Chapter wise test, Part test and Full test will be conducted
+                    periodically.
+                    It covers 460 hrs. of coaching which include 240 hrs. for IIT level preparation and 120 hrs. of
+                    assessment.
+                </p>
+                <br>
+                <p class="text-center font-semibold">Year 2: Class 12 (670 hrs.) :</p>
+                <p class="text-center">
+                    The entire syllabus for Physics , Chemistry and Mathematics of class 12th will be completed at
+                    board and mains level. Chapter wise test, Part test and Full test will be conducted periodically.
+                    It covers 460 hrs. of coaching which include 240 hrs. for IIT level preparation and 120 hrs. of
+                    assessment.
+                </p>
+                </p>
+            </div>
+            <div class="border-2 border-gray-300 absolute  mx-auto left-0 right-0 bg-white px-2 h-fit w-fit -bottom-4 cursor-pointer"
+                id="showbutton3" onclick="showhidetext(3)">
+                <p id="buttontext3">Show More</p>
+            </div>
+        </div>
+
+
+        <div class="p-4 border-2 border-gray-400 shadow-xl rounded-lg  space-y-2 relative  my-5" >
+            
+            <img src="../public/images/iit_jee_bridgecard.svg" class="mx-auto cursor-pointer" data-modal-target="formModal" data-modal-toggle="formModal">
+            <p class="text-center text-2xl font-bold">IIT JEE Bridge for Class 11</p>
+            <p class="text-center">Class 11 bridge course is a program designed to bridge the gap between the syllabus of <br>class 10 and
+                class 11 for students.
+                </p>
+            <div  class="hidden" id="moretext4">
+                <p class="text-center">
+                    The course is designed to help students adjust to the higher level of the
+                    subject and catch up on any missed topics.
+                    <br>
+                    Duration: 30 Days
+                </p>
+            </div>
+            <div class="border-2 border-gray-300 absolute  mx-auto left-0 right-0 bg-white px-2 h-fit w-fit -bottom-4 cursor-pointer"
+                id="showbutton4" onclick="showhidetext(4)">
+                <p id="buttontext4">Show More</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+ </section>
+
+<%-include('partials/queryform')%>
+<%-include('partials/footer')%>
+<script>
+   
+    
+    function showhidetext(value)
+    {
+     var text_object = getComputedStyle(document.getElementById(`moretext${value}`));
+ 
+     if(text_object.display=='none')
+         {
+             document.getElementById(`moretext${value}`).style.display='block'
+             document.getElementById(`buttontext${value}`).innerHTML='Show Less'
+             
+         }
+          else
+          {
+             document.getElementById(`moretext${value}`).style.display='none'
+             document.getElementById(`buttontext${value}`).innerHTML='Show More'
+             
+          }
+    }
+         
+   
+     
+    $(document).ready(function () {
+        $('.rankers-carousel').owlCarousel({
+            margin: 100,
+            loop: false,
+            autoplay: false,
+            autoplayTimeOut: 100,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ["<div class='nav-button owl-prev '>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 2,
+                }
+            }
+        });
+
+       
+    })
+ 
+     
+ </script>

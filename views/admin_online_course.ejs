@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS::Online Course</title>
+     <!-- tailwind CDN -->
+     <script src="https://cdn.tailwindcss.com"></script>
+
+     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<style>
+    body{
+        background-color: #FFE3AA;
+      }
+      .font-work{
+        font-family: 'Work Sans';
+      }
+      .font-work-clr{
+        font-family: 'Work Sans';
+        color: #7F8082;
+      }
+      .font-inter{
+        font-family: 'Inter';
+        color: #6F7384;
+      }
+      .box-1{
+        background: #FCF4DF;
+      }
+      .GS{
+        color: #CC9B2B;
+      }
+      .comments{
+        background: #FFEEE0;
+      }
+      .about{
+        background: #FAECD5;
+      }
+      .blogs{
+        background: #FCF4DF;
+      }
+      .plus{
+        color: #CC9B2B;
+        border: 1px solid #CC9B2B;
+      }
+</style>
+</head>
+<body>
+    
+ 
+    <div class="md:flex flex-row mt-4  md:pl-5">
+         <!-- left section -->  
+      
+       <%-include('partials/admin_side_bar')%>
+
+       <div class="bg-green-300  flex flex-col space-y-10 w-[80%]">
+        <div class="bg-orange-500 rounded-lg p-2 w-fit h-fit my-10 mx-auto cursor-pointer" id="add_online_course_button">
+            <p class="text-center text-xl">Add Online Course Section +</p>
+        </div>
+        <% for (let i = 0; i < online_course.length; i++) { %>
+            <div class="bg-gray-200 h-fit w-full p-2 ">
+            <div class="flex justify-evenly my-5">
+             <p class="text-center"><%=online_course[i].section_title%></p>
+             <a href="/admin/delete_online_section?id=<%=online_course[i]._id%>">
+             <div class="bg-red-400 border-2 border-red-600 w-fit cursor-pointer">Delete Section</div>
+             </a>
+             <div class="bg-green-400 border-2 border-green-600 w-fit cursor-pointer" onclick="add_tutorial('<%=online_course[i]._id%>')">Add Tutorial +</div>
+              </div>
+             <div class="flex flex-wap justify-evenly space-x-32 bg-red-300 overflow-x-scroll">
+              <% for (let j = 0; j < online_course[i].course_data.length; j++) { %>
+                <div class="lg:w-[40%] p-5">
+                        <a href="/admin/delete_online_tutorial?section_id=<%=online_course[i]._id%>&tutorial_id=<%=online_course[i].course_data[j]._id%>">
+                        <div class="bg-red-400 border-2 border-red-600 w-fit mx-2">Delete Tutorial</div>
+                        </a>
+                        <div class="p-2">
+                        <iframe width="550" height="315" src='<%=online_course[i].course_data[j].youtube_url%>'  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:flex hidden"></iframe>
+                        <iframe width="350" height="315" src='<%=online_course[i].course_data[j].youtube_url%>'  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:hidden flex mx-auto"></iframe>
+                        </div>
+                  </div>
+             <% } %>
+             </div>
+            </div>
+        <% } %>
+       </div>
+    </div>
+    <div id="form-modal">
+            
+    </div>
+</body>
+
+<script>
+   
+   document.getElementById('add_online_course_button').addEventListener('click',()=>{
+    document.getElementById('form-modal').innerHTML=  `<div id="contactUs" style=" background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))" class="w-[100vw] h-[100vh] flex justify-center items-center top-0 bg-[rgba(0, 0, 0, 0.25)] top-0 bottom-0 fixed overflow-y-scroll z-30
+  overflow-hidden">
+      <div
+        class="lg:w-[70%] w-[95%] relative  m-3  gap-3 mx-auto bg-white top-auto  z-30  p-[1.5rem] rounded-[1.25rem] shadow-md "
+        id="contactUs">
+        <p class="absolute top-7 right-5 w-6 text-xl font-bold cursor-pointer" alt="cross icon" id="closeForm">X</p>
+
+          <div class="mt-5">
+            <form class="space-y-2 flex flex-col" method="post" action="/admin/add_online_tutorial">
+                <label>Section Title</label>
+                <input type="text" class="p-2 border-2 border-gray-800" name="section_title">
+                <button class="bg-yellow-600 p-2 rounded-lg" type="submit">Add</button>
+            </form>
+          </div>
+      </div>
+    
+</div>`;
+document.getElementById('closeForm').addEventListener('click',()=>{
+    document.getElementById('form-modal').innerHTML=  ``;
+})
+   })
+ 
+function add_tutorial(section_id)
+{
+  document.getElementById('form-modal').innerHTML=  `<div id="contactUs" style=" background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))" class="w-[100vw] h-[100vh] flex justify-center items-center top-0 bg-[rgba(0, 0, 0, 0.25)] top-0 bottom-0 fixed overflow-y-scroll z-30
+  overflow-hidden">
+      <div
+        class="lg:w-[70%] w-[95%] relative  m-3  gap-3 mx-auto bg-white top-auto  z-30  p-[1.5rem] rounded-[1.25rem] shadow-md "
+        id="contactUs">
+        <p class="absolute top-7 right-5 w-6 text-xl font-bold cursor-pointer" alt="cross icon" id="closeForm">X</p>
+
+          <div class="mt-5">
+            <form class="space-y-2 flex flex-col" method="post" action="/admin/add_online_tutorial">
+                <label>Youtube Tutorial URL</label>
+                <input type="text" class="p-2 border-2 border-gray-800" name="youtube_url">
+                <input type="hidden" class="p-2" border-2 border-gray-800 name="id" value='${section_id}'>
+                <button class="bg-yellow-600 p-2 rounded-lg" type="submit">Add</button>
+            </form>
+          </div>
+      </div>
+    
+</div>`;
+document.getElementById('closeForm').addEventListener('click',()=>{
+    document.getElementById('form-modal').innerHTML=  ``;
+})
+}
+
+
+</script>
+</html>

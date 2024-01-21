@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queries</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+  font-family: 'Noto Sans';
+}
+body{
+  background:#FFE3AA;
+}
+/* text colors */
+.text-primary {
+  color: #275473;
+}
+
+.text-blueish {
+  color: #0962ea;
+}
+
+/* bg colors */
+.bg-primary {
+  background-color: #C77E2E;
+}
+
+.bg-avatar {
+  background-color: #d9d9d9;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+}
+
+/* border colors */
+.border-primary {
+  border-color: #FFCB00  ;
+}
+
+.border-menu {
+  border-color: #C77E2E;
+}
+
+/* sidebar styles */
+.side-navbar {
+  border-top: 5vw solid transparent;
+  border-left: 70px solid #FCF4DF;
+  
+  border-bottom: 5vw solid transparent;
+}
+  </style>
+  <body> 
+      <div class="md:flex flex-row mt-4  md:pl-5  justify-between">
+        <!-- left section -->  
+        <%-include('partials/admin_side_bar')%>
+      <!-- right section -->
+      <div class="w-full ">
+       <p class="text-3xl text-center my-10"> <%=queries[0].page_name%></p>
+        <table class="min-w-full bg-white shadow-md rounded">
+          <thead>
+              <tr class="bg-yellow-600">
+                <th class="text-left py-3 px-4">S.No.</th>
+                  <th class="text-left py-3 px-4">Name</th>
+                  <th class="text-left py-3 px-4">Mobile</th>
+                  <th class="text-left py-3 px-4">Email</th>
+                  <th class="text-left py-3 px-4">Reply</th>
+                  <th class="text-left py-3 px-4">Message</th>  
+                  <% if (queries[0].page_id == 'gs_contact') { %>
+                    <th class="text-left py-3 px-4">Resume</th>  
+                    <%}%>
+              </tr>
+          </thead>
+          <tbody>
+              <% for (let i = 0; i < queries.length; i++) { %>
+                  <tr class="<%= i % 2 === 0 ? 'bg-gray-100' : '' %>">
+                     <td class="py-2 px-4"><%= i %></td>
+                      <td class="py-2 px-4"><%= queries[i].name %></td>
+                      <td class="py-2 px-4"><%= queries[i].mobile %></td>
+                      <td class="py-2 px-4"><%= queries[i].email %></td>
+                      <td class="py-2 px-4"><%= queries[i].is_reply %></td>
+                      <td class="py-2 px-4"><%= queries[i].message %></td>
+                      <% if (queries[0].page_id == 'gs_contact') { %>
+                        <td class="py-2 px-4"><a href="/public/resumes/<%= queries[i].document_path%>" target="_blank" >Open Resume</a></td>
+                      <%}%>
+                  </tr>
+              <% } %>
+          </tbody>
+      </table>
+
+  </div>
+        </div>
+
+  </body>
+</html>
+<!-- <tbody>
+  <%  queries.forEach(element => { %>
+    <tr class="border-2 border-gray-500">
+      <td class="border border-slate-300"><%=element.name%></td>
+      <td class="border border-slate-300"><%=element.mobile%></td>
+      <td class="border border-slate-300"><%=element.email%></td>
+      <td class="border border-slate-300 text-wrap"><%=element.message%></td>
+      <td class="border border-slate-300"><%=element.is_reply%></td>
+    </tr>
+  
+<%}) %>
+ 
+
+</tbody> -->

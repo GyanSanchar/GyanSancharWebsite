@@ -1,0 +1,46 @@
+<%-include('partials/header')%>
+<section>
+    <div class="bg-[#FDF8EE] flex justify-evenly items-center py-10 lg:py-0">
+        <img src="../public/images/onlineilus.svg" class="hidden lg:flex">
+        <div class="bg-[#4D2C5E] w-fit text-white rounded-full px-4 py-2 text-2xl font-bold">
+            <button>
+                Skill Courses
+            </button>
+        </div>
+
+        <img src="../public/images/onlineilus2.svg" class="hidden lg:flex">
+    </div>
+</section>
+<section class="my-5">
+    <div class="flex flex-wrap lg:justify-around p-2">
+    <%content.course_content.forEach(element => { %>
+    <div class="lg:w-[35%] w-full shadow-xl p-2 py-10 rounded-lg">
+        <div>
+            <img src="<%=element.image_url%>">
+        </div>
+        <div>
+            <p class="text-center font-bold text-2xl py-5"><%=element.course_name%></p>
+            <p class="text-center"><%=element.course_description%>
+            </p>
+        </div>
+        <div class=" flex justify-end px-2 py-2">
+            <div class="bg-[#FF7426] w-fit px-4 py-2 rounded-lg  "><a href="<%=element.explore_button%>"  target="_blank"><p class="text-white">Explore Now</p></a></div>
+        </div>
+    </div>  
+    <%}) %> 
+</div>
+ </section>
+       <section>
+        <div class="justify-evenly flex lg:flex-row flex-col  space-y-5 lg:space-y-0 mt-16 w-[95%] mx-auto">
+            <a href="https://dlbdl.on-app.in/app/oc/75686/dlbdl" target="_blank" class="lg:w-[25%] w-full ">
+             <img src="../public/images/vedicmath.svg" data-aos="fade-up" >
+            </a>
+            <a href="https://dlbdl.on-app.in/app/oc/103611/dlbdl" target="_blank" class="lg:w-[25%] w-full">
+             <img src="../public/images/mindmap.svg" data-aos="fade-up" >
+            </a>
+            <a class="lg:w-[25%] w-full" href="https://dlbdl.on-app.in/app/oc/101230/dlbdl" target="_blank">
+              <img src="../public/images/mat_card.svg" data-aos="fade-up" >
+            </a>
+        </div>
+       </section>
+<%-include('partials/footer')%>

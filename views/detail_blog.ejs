@@ -1,0 +1,147 @@
+<%-include('partials/header')%>
+
+<style>
+    body{
+        font-family: 'Poppins';
+    }
+    .blog{
+        background-color:  #FDF8EE;
+    }
+    .btn-blog{
+      background: #4D2C5E;
+    }
+    .submit{
+        background: #FF7426;
+        
+    }
+    .form{
+        background: #FBEFCE;
+
+    }
+    .ql-align-center{
+        text-align: center;
+    }
+   
+</style>
+<body>
+ 
+    <div class="blog h-52 w-full"> 
+      <div class="flex  justify-evenly">
+        <img src="images/Saly-26.png" alt="" class="hidden lg:block">
+        <button class="h-12 w-36 mt-16 text-white text-3xl rounded-full btn-blog">Blogs</button>
+        <img src="images/Marni 4.png" alt="" class="hidden lg:block">
+      </div> 
+    </div>
+
+    <!--date-->
+    <div class="p-10"> 
+        <p class="text-lg text-center"><%=blog_detail.date%></p>
+        <p class="text-2xl font-black md:text-4xl lg:text-4xl text-center mt-2"> <%=blog_detail.title%> </p>
+    </div>
+    <!--Images-->
+    <div class="lg:w-[90%] mx-auto lg:p-10 w-full p-2">
+        <img src="<%=blog_detail.path%>"  alt="" class="lg:float-right lg:w-72 lg:h-72 w-full"> 
+        <div class=" mt-4 lg:mt-0"><%-blog_detail.description%></div>
+    </div>
+
+    <% blog_detail.comments.forEach(function(item) { %>
+     
+        <% if (item.approved === true) { %>
+          <div class="bg-[#FBEFCE] border-2 border-yellow-500 rounded-lg w-[90%] mx-auto p-2 text-center">
+          <p class="text-lg font-bold"><%=item.name%></p>
+          <p class="text-md"><%=item.message%></p>
+        </div>
+        <% } else { %>
+          
+        <% } %>
+     
+    <% }); %>
+    <!--form -->
+
+    <div class="w-full mt-8 md:text-left  lg:mt-4 sm:mt-0">
+        <div class="h-auto space-y-5 lg:mx-12   pt-4 mx-4 rounded-lg shadow px-4 form" >
+          <form class="space-y-6 form" action="/add_comment" method="post" id="myForm">
+            <div class="text-2xl font-semibold font-poppins font-bold text-gray-900 pt-3">
+            Comment
+            </div>
+            <div>
+              <input type="hidden" name="blog_id" value="<%=blog_detail._id%>">
+              <input type="hidden" name="blog_title" value="<%=blog_detail.title%>">
+              <label for="name" class="block mb-2 -mt-2 text-lg text-black bold">Name*</label >
+              <input
+                type="name"
+                name="name"
+                class=" text-black text-sm rounded-full block w-full p-2.5"
+                required
+              />
+            </div>
+             
+            <div>
+              <label for="email" class="block mb-2 text-lg text-black bold"
+                >Email*</label >
+              <input
+                type="email"
+                name="email"
+                class=" text-black text-sm rounded-full block w-full p-2.5"
+                required  />
+            </div>
+            
+            <div>
+              <label for="msgg" class="block mb-2 text-lg text-black bold"
+                >Message*</label>
+              <input
+                type="name"
+                name="message"
+                class=" text-black text-sm rounded-xl block h-36 w-full p-2.5"
+                required />
+
+            </div>
+           
+            <div class=" ">
+              <button class="bg-orange-500  text-white font-bold text-xl mt-8  py-2 px-10 rounded-full " type="submit" >
+                Submit
+              </button>
+            </div>
+
+            <br />
+          </form>
+        </div>
+      </div>
+
+    <!--form sec end-->
+   
+<script>
+   $(document).ready(function()
+    {
+        $('#myForm').submit(function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Serialize the form data
+            const formData = $(this).serialize();
+
+            // Send an AJAX request to the server
+            $.ajax({
+                type: 'POST',
+                url: '/add_comment',
+                data: formData,
+                success: function (response) {
+                    // Display the success message
+                    $('#myForm')[0].reset();
+                    $('#myButton').trigger('click');
+                    Swal.fire(response)
+
+                    // Optionally, reset the form
+                   
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                },
+            });
+        });
+    })
+</script>
+
+
+
+
+
+<%-include('partials/footer')%>

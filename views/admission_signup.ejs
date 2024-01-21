@@ -1,0 +1,236 @@
+
+<%-include('partials/header')%>
+<style>
+    body{
+        font-family: 'Poppins';
+    }
+    .blog{
+        background-color:  #FDF8EE;
+    }
+    .btn-blog{
+      background: #4D2C5E;
+    }
+    .submit{
+        background: #FF7426;
+        
+    }
+    .form{
+        background: #FBEFCE;
+
+    }
+
+   
+</style>
+
+    <!--section 1-->
+    <div class="blog h-52 w-full"> 
+      <div class="flex  justify-evenly">
+        <button class="h-12 w-auto px-4 mt-16 text-white  text-lg md:text-2xl lg:text-3xl rounded-full btn-blog">Admission Open for Class 9 to 12</button>
+      </div> 
+    </div>
+
+    <!--section 2 call-->
+    <div class="h-16 w-full bg-[#DD9C13]"> 
+        <p class="text-white text-center text-sm md:text-2xl lg:text-3xl pt-4">Call @ 9654272501 Between 7:30 AM To 8:00 PM</p>
+        
+      </div>
+   
+    <!--section 3-->
+    <div class="lg:flex flex-row">
+        <!--form -->
+        <div class="w-full lg:w-1/2 mt-8 md:text-left ">
+            <p class="mx-4 lg:mx-12 text-xl lg:text-3xl font-semibold">Register for Free Demo Class - </p>
+    <div class="h-auto space-y-5 lg:mx-12   pt-4 mx-4 rounded-lg shadow px-4 mt-8 form" >
+        
+      <form class="space-y-6 form"  id="admission_form">
+       
+        <div>
+          <label for="name" class="block mb-2 mt-2 text-lg text-black bold">Name*</label >
+          <input
+            type="name"
+            name="name"
+            class=" text-black text-sm rounded-full block w-full p-2.5"
+            required
+          />
+        </div>
+        <div>
+            <label for="email" class="block mb-2 text-lg text-black bold"
+              >Mobile Number*</label >
+            <input
+              type="tel"
+              name="mobile"
+              class=" text-black text-sm rounded-full block w-full p-2.5"
+              required  />
+          </div>
+          
+        <div>
+          <label for="email" class="block mb-2 text-lg text-black bold"
+            >Email*</label >
+          <input
+            type="email"
+            name="email"
+            class=" text-black text-sm rounded-full block w-full p-2.5"
+            required  />
+        </div>
+        
+        <div>
+          <label for="msgg" class="block mb-2 text-lg text-black bold"
+            >Message*</label>
+            <textarea  name="message" class="text-black text-sm rounded-xl block w-full h-36" id="text_message">
+
+            </textarea >
+            <input type="hidden" name="page_id" value="ADMISSION_NINE_TO_TWELVE">
+            <input type="hidden" name="page_name" value="ADMISSION NINE TO TWELVE">
+        </div>
+
+        <div class="flex">
+            <input type="checkbox" name="" class="mx-4 w-4" id="email_checkbox">
+            <label for="" class="text-sm"> &nbsp; Sign up for our email list for updates, promotions, and more.</label>
+        </div>
+       
+        <div>
+          <button class="bg-orange-500  text-white font-bold text-xl mt-4  py-2 px-10 rounded-full " id="submit_form">
+            SIGN UP
+          </button>
+        </div>
+
+        <br />
+      </form>
+    </div>
+         </div>
+        <!--form sec end-->
+        <div class="w-full lg:w-1/2 mt-12 lg:mt-24 mx-4">
+            <p class="mx-4 lg:mx-12 text-lg md:text-xl lg:text-3xl font-semibold">Foundation , JEE 2024, NEET 2024-ADMISSION open for Class 9 to 12 </p>
+            <p class="mx-2 lg:mx-12 text-lg mt-12">Get up to 90%* Scholarship.</p>
+            <p class="mx-2 lg:mx-12 text-lg mt-12">Attempt <a href="https://bit.ly/m/GS_Scholarship_Test?r=qr" class="text-[#CC9B2B]">Online Scholarship test</a>  now.</p>
+            <button class="h-12 w-auto px-4 mt-16 text-white text-xl rounded-full bg-[#455A64] flex py-2 lg:mx-12">
+                <img src="../public/images/Form_whatsapp_Icon.svg" alt="" class="mx-2 pt-[0.3rem]">
+                Message for More Details</button>
+        </div>
+    </div><!--sec 3 main div close-->
+
+    <!---Section 4-->
+  <div class="text-xl lg:text-3xl font-semibold text-center mt-12">GyanSanchar Scholarship Test</div>
+
+  <div class="lg:flex flex-row lg:mx-12">
+    <div class="h-auto w-full lg:w-1/3"><img src="../public/images/sch_card1.svg" alt="">
+       <p class="px-16 text-[#8A8A8A]"> <b class="text-black"> GyanManthan</b> is an online platform of GyanSanchar with amazing features like <b class="text-black">Class schedules, Recorded lectures, Assignments, Online Test, Performance report 
+       </b> and <a href="/download_app"> <b class="text-[#CC9B2B] underline">much more..</b> </a>
+      </p>
+    </div>
+    <div class="h-auto w-full lg:w-1/3"><img src="../public/images/sch_card2.svg" alt="">
+        <p class="px-16 text-[#8A8A8A]"> Take the test at a time of your choice.
+          <br> <b class="text-black">  Timings:</b> Anytime during the day
+          <br> <b class="text-black">  Duration:</b> 90 mins
+          <br> <b class="text-black">  Mode:</b> Online (from home)
+          <br> <b class="text-black">  Link:</b> <a href="https://bit.ly/m/GS_Scholarship_Test"> <b class="text-[#CC9B2B] underline">Scholarship Test </b></a> 
+       </p>
+    </div>
+    <div class="h-auto w-full lg:w-1/3"><img src="../public/images/sch_card3.svg" alt="">
+      <p class="px-16"> <b class="text-black"> Course</b> </p>
+        <ul class="list-disc text-[#8A8A8A] px-16">
+        <li class="-mb-4"> 1 Year course (Class IX, X, XI or XII)  </li>     <br>   
+        <li class="-mb-4"> 2 Years Course (Class IX to X or XI to XII) </li> <br>
+        <li class="-mb-4"> 3 Years course (Class X to XII) </li>  <br>
+        <li class="-mb-4"> 4 Years course (Class IX to XII) </li>     <br>
+      </ul>
+      <p class="px-16"> <b class="text-black"> Eligibility </b> </p>
+      <ul class="list-disc text-[#8A8A8A] px-16">
+      <li class="-mb-4">  Class IX - Class VIII passed students.  </li>     <br>   
+      <li class="-mb-4"> Class X - Class IX passed students. </li> <br>
+      <li class="-mb-4">  Class XI - Class X passed students. </li>  <br>
+      <li class="-mb-4"> Class XII - Class XI passed students. </li>     <br>
+    </ul>
+    </div>
+  </div>
+ 
+   <!----Section 5-->
+   <div class="text-xl lg:text-3xl font-semibold text-center mt-12">Course Features</div>
+
+
+   <div class="md:flex flex-row lg:mx-12 mt-8">
+     
+    <div class="h-72 w-full lg:w-1/3 bg-white shadow-2xl lg:mx-12 rounded-xl">
+       <div class="flex justify-center bg-[#FF6348] mx-4 mt-8">
+        <img src="../public/images/sch_sec4_card1.svg" alt="" class="h-48 pt-2">
+       </div>
+       <p class="text-black font-bold mt-4 text-center mb-2">Expert Faculty from IIT, NIT , DU</p>
+     </div>
+
+     <div class="h-72 w-full lg:w-1/3 bg-white shadow-2xl lg:mx-12 rounded-xl">
+      <div class="flex justify-center bg-[#FFEEB4] mx-4 mt-8">
+       <img src="../public/images/sch_sec4_card2.svg" alt="" class="h-48 pt-2">
+      </div>
+      <p class="text-black font-bold mt-4 text-center mb-2">Digital Material</p>
+    </div>
+    
+    <div class="h-72 w-full lg:w-1/3 bg-white shadow-2xl lg:mx-12 rounded-xl">
+      <div class="flex justify-center bg-[#022AFF] mx-4 mt-8">
+       <img src="../public/images/sch_sec4_card3.svg" alt="" class="h-48 pt-2 flex items-center justify-center">
+      </div>
+      <p class="text-black font-bold mt-4 text-center mb-2">Mock Test Based on Exam Pattern</p>
+    </div>
+     
+  </div>
+  
+  <div class="md:flex flex-row lg:mx-12 mt-8">
+     
+    <div class="h-72 w-full lg:w-1/3 bg-white shadow-xl lg:mx-12 rounded-xl">
+       <div class="flex justify-center bg-[#70BCAB] mx-4 mt-8">
+        <img src="../public/images/sch_sec4_card4.svg" alt="" class="h-48 pt-2">
+       </div>
+       <p class="text-black font-bold mt-4 text-center mb-2">Daily Practice Sheets</p>
+     </div>
+
+     <div class="h-72 w-full lg:w-1/3 bg-white shadow-xl lg:mx-12 rounded-xl">
+      <div class="flex justify-center bg-[#FFCA8C] mx-4 mt-8">
+       <img src="../public/images/sch_sec4_card5.svg" alt="" class="h-48 pt-2">
+      </div>
+      <p class="text-black font-bold mt-4 text-center mb-2">All India Level Test Series</p>
+    </div>
+    
+    <div class="h-72 w-full lg:w-1/3 bg-white shadow-xl lg:mx-12 rounded-xl">
+      <div class="flex justify-center bg-[#E8B8FF] mx-4 mt-8">
+       <img src="../public/images/sch_sec4_card6.svg" alt="" class="h-48 pt-2">
+      </div>
+      <p class="text-black font-bold mt-4 text-center mb-2">Study Material</p>
+    </div>
+     
+  </div>
+
+
+  <script>
+     $(document).ready(()=>
+     {
+      
+         $('#admission_form').submit(()=>
+         {
+
+               event.preventDefault();
+                            
+               if($('#email_checkbox').is(':checked'))
+               {
+                  const form_data = $('#admission_form').serialize();
+                  $.ajax({
+                      type: 'POST',
+                      url: '/submit_form',
+                      data: form_data,
+                      success: function (response) {
+                          $('#admission_form')[0].reset();
+                          Swal.fire(response)
+                      },
+                      error: function (error) {
+                          Swal.fire(error.responseJSON)
+                      }
+                  });
+               }
+               else
+               {
+                Swal.fire('Please Tick the checkbox')
+               }
+         })
+     })
+  </script>
+  <%-include('partials/footer')%>
+  
+ 

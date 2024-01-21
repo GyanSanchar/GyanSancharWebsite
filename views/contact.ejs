@@ -1,0 +1,498 @@
+<%-include('partials/header')%>
+<style>
+  .font-roboto
+  {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+  }
+.blog{
+    background-color:  #FDF8EE;
+}
+.btn-blog{
+  background: #4D2C5E;
+}
+
+.location{
+    color: #CC9B2B;
+}
+.card1{
+    background: #72A6FF;
+}
+.card2{
+    background: #FFCA8C;
+}
+.card3{
+    background: #E8B8FF;
+}
+.card5{
+    background: #70BCAB;
+}
+.address{
+    background: #FF7426;
+}
+.life{
+    background: #FFE7D1; 
+}
+
+.owl-carousel .nav-button {
+  height: 50px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 30% !important;
+}
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+.owl-carousel .owl-prev {
+  left: -5%;
+}
+.owl-carousel .owl-next {
+  right:-5%;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  color: #ffffff;
+  font-size: 39px;
+  background-color: rgba(0, 0,0,0) !important;
+  color: #C77E2E !important;
+  border-radius: 3px;
+}
+@media screen and (max-width: 480px) {
+  .owl-carousel .owl-prev {
+  left: -7%;
+}
+.owl-carousel .owl-next {
+  right:-7%;
+}
+
+}
+</style>
+<body>
+
+<div class="blog h-60 w-full font-roboto"> 
+  <div class="flex  justify-evenly items-center">
+    <!-- <img src="../public/images/Other 15.png" alt="" class="hidden lg:block"> -->
+    <button class="h-12 w-48 mt-16 text-white text-3xl rounded-full btn-blog">Contact us</button>
+    <!-- <img src="../public/images/Ikbal 1.png" alt="" class="hidden lg:block"> -->
+  </div> 
+</div>
+
+<!--LOCATION-->
+
+<div class=" mt-8 font-roboto">
+<p class="text-xl md:text-2xl lg:text-5xl  text-center font-extrabold location">GYANSANCHAR - GHAZIABAD</p>
+<p class="text-black text-center text-2xl font-semibold mt-8 mx-4 lg:mx-12">If you need more details of courses, contact us or just tell us about your needs. We will get back to you as soon as possible with the answers you need!</p>
+
+<div class="flex mx-8 lg:mx-12">
+  <a href="https://wa.me/919654272501">
+  <button class="h-12 w-auto px-4 mt-8 text-white text-xl rounded-full bg-[#455A64] flex py-2">
+      <img src="../public/images/Form_whatsapp_Icon.svg" alt="" class="mx-2 pt-[0.3rem]">
+      Connect with us</button>
+    </a>
+</div> 
+</div>
+
+
+<!--cards-->
+
+<div class=" justify-items-stretch my-12 mx-auto px-4 md:px-12">
+  <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+      <!-- Card(1) -->
+      <div class="my-1 mx-8 px-1 w-full h-72 lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card1">
+     <!--ADDRESS-->
+          <div class="overflow-hidden rounded-lg font-roboto">
+            <div class="text-black mt-2 lg:mt-8 lg:text-lg text-md text-center font-semibold">
+                <p>B-12 2nd floor Kacheri road,  </p>
+                <p>RDC, Raj Nagar, Ghaziabad,</p> 
+                <p> Uttar Pradesh 201001 </p> 
+            </div>
+             <div class="flex justify-center  ">
+                  <img alt="cards1" class="block rounded " src="../public/images/card1.png"> 
+              </div>                      
+              <div class="flex justify-center font-roboto">
+                <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-8 px-4 text-white text-lg lg:text-3xl rounded-full address">OUR ADDRESS</button>
+              </div>
+          </div>
+    <!-- END ADDRESS-->
+      </div>
+<!-- END Card(1) -->
+
+    <!-- Card(2) -->
+    <div class="my-1 mx-8 px-1 w-full h-72 lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card2 font-roboto">
+        <!--ADDRESS--> 
+             <div class="overflow-hidden rounded-lg">
+               <div class="text-black mt-2 lg:mt-8  lg:text-xl text-md text-center font-semibold font-roboto">
+                   <p> +91-9654272501</p>   
+               </div>
+                <div class="flex justify-center mt-2">
+                     <img alt="cards1" class="block rounded mt-8" src="../public/images/card2.png"> 
+                 </div>                      
+                 <div class="flex justify-center text-black ">
+                    <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-8 px-4 text-white text-lg lg:text-3xl rounded-full address">CONTACT US</button>
+                 </div>
+             </div>
+       <!-- END ADDRESS-->
+         </div>
+<!-- END Card(2) -->
+     
+<!-- Card(3) -->
+<div class="my-1 mx-8 px-1 w-full h-72 lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card3">
+    <!--ADDRESS-->
+         <div class="overflow-hidden rounded-lg">
+           <div class="text-black mt-2 lg:mt-8  lg:text-xl text-md text-center font-semibold font-roboto">
+               <p> contact@gyansanchar.com </p>
+           </div>
+            <div class="flex justify-center ">
+                 <img alt="cards1" class="block rounded " src="../public/images/card3.png"> 
+             </div>                      
+             <div class="flex justify-center text-black">
+                <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-6 px-4 text-white text-lg lg:text-3xl rounded-full address">OUR EMAIL</button>
+             </div>
+         </div>
+   <!-- END ADDRESS-->
+     </div>
+<!-- END Card(3) -->
+
+  </div>
+</div>
+
+
+<!--LOCATION 2-->
+
+<div class="font-roboto mt-8">
+<p class="text-xl md:text-2xl lg:text-5xl  text-center font-extrabold location">GYANSANCHAR - NOIDA</p>
+<p class="text-black text-center text-2xl font-semibold mt-8 mx-4 lg:mx-12">If you need more details of courses, contact us or just tell us about your needs. We will get back to you as soon as possible with the answers you need!</p>
+
+<div class="flex mx-8 lg:mx-12">
+  <a href="https://wa.me/919654272501">
+  <button class="h-12 w-auto px-4 mt-8 text-white text-xl rounded-full bg-[#455A64] flex py-2">
+      <img src="../public/images/Form_whatsapp_Icon.svg" alt="" class="mx-2 pt-[0.3rem]">
+      Connect with us</button>
+    </a>
+</div> 
+</div>
+
+<!--cards-->
+
+<div class=" justify-items-stretch my-12 mx-auto px-4 md:px-12">
+<div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+    <!-- Card(4) -->
+    <div class="my-1 mx-8  px-1 w-full h-72  lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card3">
+   <!--ADDRESS-->
+        <div class="overflow-hidden rounded-lg font-roboto">
+          <div class="text-black font-semibold mt-2 lg:mt-8 lg:text-lg text-md text-center">
+              <p>Blk-15, Sector 116, Noida,   </p>
+              <p>Uttar Pradesh, India </p> 
+          </div>
+           <div class="flex justify-center  ">
+                <img alt="cards1" class="block rounded " src="../public/images/card1.png"> 
+            </div>                      
+            <div class="flex justify-center ">
+              <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-14 px-4 text-white text-lg lg:text-3xl rounded-full address">OUR ADDRESS</button>
+            </div>
+        </div>
+  <!-- END ADDRESS-->
+    </div>
+<!-- END Card(4) -->
+
+  <!-- Card(5) -->
+  <div class="my-1 mx-8 px-1 w-full h-72 lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card5">
+      <!--ADDRESS-->
+           <div class="overflow-hidden rounded-lg font-roboto">
+             <div class="text-black mt-2 lg:mt-8  lg:text-xl text-md text-center font-semibold">
+                 <p> +91-9654272501</p>   
+             </div>
+              <div class="flex justify-center ">
+                   <img alt="cards1" class="block rounded mt-8" src="../public/images/card2.png"> 
+               </div>                      
+               <div class="flex justify-center ">
+                  <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-8 px-4 text-white text-lg lg:text-3xl rounded-full address">CONTACT US</button>
+               </div>
+           </div>
+     <!-- END ADDRESS-->
+       </div>
+<!-- END Card(5) -->
+   
+<!-- Card(6) -->
+<div class="my-1 mx-8 px-1 w-full h-72 lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card2">
+  <!--ADDRESS-->
+       <div class="overflow-hidden rounded-lg">
+         <div class="text-black  mt-2 lg:mt-8  lg:text-xl text-md text-center font-semibold">
+             <p> contact@gyansanchar.com </p>
+         </div>
+          <div class="flex justify-center ">
+               <img alt="cards1" class="block rounded " src="../public/images/card3.png"> 
+           </div>                      
+           <div class="flex justify-center ">
+              <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-6 px-4 text-white text-lg lg:text-3xl rounded-full address">OUR EMAIL</button>
+           </div>
+       </div>
+ <!-- END ADDRESS-->
+   </div>
+<!-- END Card(6) -->
+
+</div>
+</div>
+<!---Hours-->
+   <section>
+    <div class="font-roboto mt-8">
+      <p class="text-xl md:text-2xl lg:text-5xl  text-center font-extrabold location">HOURS</p>
+    </div>
+
+    <div class=" justify-items-stretch my-12 mx-auto px-4 md:px-12">
+      <div class="flex flex-wrap  -mx-1 lg:mx-12">
+          <!-- Card(4) -->
+          <div class="my-1 mx-8  px-1 w-full h-72  lg:h-96 rounded-lg md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4 card3">
+         <!--ADDRESS-->
+              <div class="overflow-hidden rounded-lg font-roboto">
+                <div class="text-black font-semibold mt-2 lg:mt-8 lg:text-lg text-md text-center">
+                    <!-- <p>Blk-15, Sector 116, Noida,   </p>
+                    <p>Uttar Pradesh, India </p>  -->
+                </div>
+                 <div class="flex justify-center  ">
+                      <img alt="cards1" class="block rounded " src="../public/images/card1.png"> 
+                  </div>                      
+                  <div class="flex justify-center ">
+                    <button class="h-12 lg:h-16 w-70%  lg:w-full lg:mt-24 px-4 text-white text-lg lg:text-3xl rounded-full address">OUR ADDRESS</button>
+                  </div>
+              </div>
+        <!-- END ADDRESS-->
+          </div>
+          <div class="mt-12 font-roboto">
+            <p class="text-black text-xl lg:text-3xl font-semibold mt-12">Open Today - <b class="underline text-[#CC9B2B]">9:00 am to 6:00 pm</b> </p>
+            <p class="text-black text-xl lg:text-3xl font-semibold mt-12">Monday - Saturday: 10 am - 7 pm</p>
+            <p class="text-black text-xl lg:text-3xl font-semibold mt-12">Sunday: 10am - 2pm </p>
+          </div>
+      <!-- END Card(4) -->    
+      </div>
+      </div>
+
+   </section>
+<!--download Brochure-->
+<div class="flex justify-center">
+<a href="../public/images/GYANSANCHR Brochure-7b8cdcd.pdf" target="_blank">
+<button class="h-16 w-92 mx-12 lg:mx-0 px-12 mt-16 text-white text-lg md:text-3xl lg:text-3xl rounded-full btn-blog">Downlaod Brochure</button>
+</a>
+</div>
+
+<!--LET’S BUILD BEAUTIFUL FUTURE-->
+
+<div class="h-full w-full mt-12 life">
+ <div  class="flex justify-center ">
+    <img src="../public/images/Layer1000.png" alt="" class="mt-8">
+ </div>
+ <div class="flex justify-center text-lg md:text-3xl lg:text-5xl font-extrabold mt-8">  
+    <p>LET’S BUILD BEAUTIFUL FUTURE</p>
+</div>
+<div  class="flex justify-center">
+    <img src="../public/images/Mask group.svg" alt="" class="mt-8">
+ </div>
+ <div class="flex justify-center text-sm md:text-3xl lg:text-4xl font-bold mt-8">  
+    <p>IIT JEE | NEET | CUET | BOARD | FOUNDATION | OLYMPIAD</p>
+</div>
+<div class="mt-8 text-xs md:text-xl lg:text-2xl">
+    <p class="flex justify-center">A GOOD EDUCATION IS A FOUNDATION FOR A BETTER FUTURE </p>   
+     <p class="flex justify-center mt-2 ">GET YOUR KID FUTURE READY</p>
+</div>
+</div>
+<!--BOOK APPOINTMENTS FOR CONSULTATION-->
+<div class="text-md md:text-2xl lg:text-5xl mx-2 text-center font-extrabold mt-16 ">
+<p class="location">BOOK APPOINTMENTS FOR CONSULTATION </p>
+<p class="mt-8 font-roboto">Courses for 11th and 12th (PCM /PCB)</p>
+</div>
+<section>
+  <!--Card 1-->
+  <div class="md:flex flex-row mt-12 mx-8">
+    <div class="w-full lg:w-[35%]"><img src="../public/images/contact_appointment_card1.png" alt=""></div>
+    <div class="w-full lg:w-[65%] mt-2">
+      <p class="text-black text-xl lg:text-3xl font-semibold mt-12 mx-4 lg:mx-16">G-IIT JEE MAINS | Advance | Class 11 | Class 12 <br> ( online and hybrid coaching) </p>
+      <p class="text-black text-xl font-semibold mt-2 mx-4 lg:mx-16">30 mins | Free</p>
+      <p class="text-[#8A8A8A] text-xl mt-4 mx-4 lg:mx-16">The objective of G-IIT JEE is to train and mentor student's for IIT JEE Mains and JEE Advance examination along with school and board exams.</p>
+    </div>
+  </div>
+  <!--Card 1 END-->
+
+   <!--Card 2-->
+   <div class="md:flex flex-row mt-2 mx-8">
+    <div class="w-full lg:w-[35%]"><img src="../public/images/contact_appointment_card2.svg" alt=""></div>
+    <div class="mt-2 w-full lg:w-[65%] ">
+      <p class="text-black text-xl lg:text-3xl font-semibold mt-12 mx-4 lg:mx-16">G-Medical | NEET | Class 11 | Class 12<br> ( online and hybrid coaching) </p>
+      <p class="text-black text-xl font-semibold mt-2 mx-4 lg:mx-16">30 mins | Free</p>
+      <p class="text-[#8A8A8A] text-xl mt-4 mx-4 lg:mx-16">The objective of G-Medical is to train and mentor student's for NEET examination along with school and board exams . With this preparation, student's can also appear for regional medical entrance test.</p>
+    </div>
+  </div>
+  <!--Card 2 END-->
+  <p class="mt-8 text-black text-center font-extrabold lg:text-5xl font-roboto">Courses for 6th , 7th and 8th</p>
+
+   <!--Card 3-->
+   <div class="md:flex flex-row mt-2 mx-8">
+    <div class="w-full lg:w-[35%]"><img src="../public/images/contact_appointment_card3.svg" alt=""></div>
+    <div class="mt-2 w-full lg:w-[65%] ">
+      <p class="text-black text-xl lg:text-3xl font-semibold mt-12 mx-4 lg:mx-16">Li’l Genius Class 6 to 8 ( online and hybrid coaching) </p>
+      <p class="text-black text-xl font-semibold mt-2 mx-4 lg:mx-16">30 mins | Free</p>
+      <p class="text-[#8A8A8A] text-xl mt-4 mx-4 lg:mx-16">The objective of Li’l Genius is to prepare students of Class 6th,7th and 8th for School exams, Olympiad and upcoming vast studies of class 9th and 10th.</p>
+    </div>
+  </div>
+  <!--Card 3 END-->
+  <p class="mt-8 text-black text-center font-extrabold lg:text-5xl font-roboto">Courses for 9th and 10th</p>
+
+   <!--Card 4-->
+   <div class="md:flex flex-row mt-2 mx-8">
+    <div class="w-full lg:w-[35%]"><img src="../public/images/contact_appointment_card1.png" alt=""></div>
+    <div class="mt-2 w-full lg:w-[65%] ">
+      <p class="text-black text-xl lg:text-3xl font-semibold mt-12 mx-4 lg:mx-16">Arambh Foundation Class 9 | class 10 | nTSE (online and hybrid coaching) </p>
+      <p class="text-black text-xl font-semibold mt-2 mx-4 lg:mx-16">30 mins | Free</p>
+      <p class="text-[#8A8A8A] text-xl mt-4 mx-4 lg:mx-16">The objective of Arambh Foundation is to prepare students for class 9th and 10th and for upcoming vast studies of class 11th and 12th of any stream. This course includes complete preparation for Board and NTSE Exams.</p>
+    </div>
+  </div>
+
+  <!--Card 4 END-->
+  <p class="mt-8 text-black text-center font-extrabold lg:text-5xl font-roboto">Courses for 12th and 12th Pass Out</p>
+
+  <!--Card 5-->
+  <div class="md:flex flex-row mt-2 mx-8">
+    <div class="w-full lg:w-[35%]"><img src="../public/images/contact_appointment_card5.svg" alt=""></div>
+    <div class="mt-2 w-full lg:w-[65%] ">
+      <p class="text-black text-xl lg:text-3xl font-semibold mt-12 mx-4 lg:mx-16">G-NDA | NA | Class 12 (Online and Hybrid coaching) </p>
+      <p class="text-black text-xl font-semibold mt-2 mx-4 lg:mx-16">30 mins | Free</p>
+      <p class="text-[#8A8A8A] text-xl mt-4 mx-4 lg:mx-16">NDA/NA is a Defense entrance exam conducted to recruit eligible personnel to the Indian Army , Navy and Air Force Wing of National Defense Academy and Indian Naval Academy This course id to provide coaching to students for appearing in NDA entrance . This exam happens twice a year.</p>
+    </div>
+  </div>
+  <!--Card 5-->
+  <p class="mt-8 text-black text-center font-extrabold lg:text-5xl font-roboto">Skill Development</p>
+
+   <!--Card 6-->
+   <div class="md:flex flex-row mt-2 mx-8">
+    <div class="w-full lg:w-[35%]"><img src="../public/images/contact_appointment_card6.svg" alt=""></div>
+    <div class="mt-2 w-full lg:w-[65%] ">
+      <p class="text-black text-xl lg:text-3xl font-semibold mt-12 mx-4 lg:mx-16">Vedic Mathematics </p>
+      <p class="text-black text-xl font-semibold mt-2 mx-4 lg:mx-16">30 mins | Free</p>
+      <p class="text-[#8A8A8A] text-xl mt-4 mx-4 lg:mx-16">Gyan Sanchar helps to make math fun for student . Enroll for courses to learn the tricks for faster and easier calculation.</p>
+    </div>
+  </div>
+  <!--Card 6 END-->
+
+   
+  
+</section>
+<section>
+  <%-include('partials/course_caraousel')%>
+</section>
+
+
+<!--hiring-->
+<div class="text-xl md:text-2xl lg:text-4xl  text-center font-extrabold mt-8">
+<p class="location">We'r Hiring</p>
+</div>
+
+<!-- hiring section -->
+<div class="container w-[80%] mx-auto bg-white shadow-2xl mt-8 ">
+<div class="md:flex flex-row  md:pl-5 ">
+<img
+  src="../public/images/Frame 1.svg"
+  alt="hiring image"
+  class="h-[25rem] w-[17rem] mx-auto md:mx-0 md:h-96 md:w-96 lg:h-[35rem] lg:w-[30rem] my-12"
+/>
+<div class=" space-y-5 p-2 mx-12 md:text-left lg:max-w-2/3  lg:mx-12 ">
+    <form class="w-full mx-auto" action="/submit_contact_form" method="post" id="myForm" enctype="multipart/form-data">
+      <input type="hidden" name="page_name" value="<%=content.title%>" >
+      <input type="hidden" name="page_id" value="<%=content.page_id%>">
+        <div class=" -mx-3 mb-6 flex flex-wrap mt-12">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="text-gray-700 text-md font-bold mb-2">
+              First Name
+            </label>
+            <input class=" block w-full py-3 px-4 border-black border border-x-0 border-t-0 outline-none"  type="text" name="name" >
+            
+          </div>
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class=" text-gray-700 text-md font-bold mb-2" >
+              Last Name
+            </label>
+            <input class="block w-full py-3 px-4  border-black border border-x-0 border-t-0 outline-none"  type="text" >
+          </div>
+
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block text-gray-700 text-md font-bold mb-2" for="grid-first-name">
+                  Email*
+                </label>
+                <input class=" block w-full py-3 px-4 mb-3 border-black border border-x-0 border-t-0 outline-none"  type="text" name="email">
+                
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label class="block  text-gray-700 text-md font-bold mb-2" >
+                  Phone
+                </label>
+                <input class="block w-full py-3 px-4  border-black border border-x-0 border-t-0 outline-none"  type="text" name="mobile" >
+              </div>
+        </div>
+       
+        <div>
+          <label for="email" class="block mb-2 text-lg text-gray-700 font-bold bold"
+            >Upload Resume*</label >
+          <input
+            type="file"
+            name="document_path"
+            class=" text-black text-sm rounded-full block w-full p-2.5"
+            required  />
+        </div>
+        
+
+        <div class="flex flex-wrap -mx-3 mb-6 mt-4">
+            <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                <label class="block  text-gray-700 text-md font-bold mb-2" for="grid-first-name">
+                  Message
+                </label>
+                
+                <textarea  name="message" class="text-black text-sm rounded-xl border-2 border-black block w-full h-36">
+
+                </textarea>
+              </div>
+              
+         </div>
+              <div class="flex justify-end ">
+                <button class=" py-2   lg:mt-14 px-4 text-white text-lg lg:text-2xl rounded-full address" type="submit">Send Message</button>
+              </div>
+        </div>
+      </form>
+ </div>
+</div>
+
+
+<%-include('partials/footer')%>
+<script>
+  $(document).ready(function()
+   {
+       $('#myForm').submit(function (event) {
+           event.preventDefault(); // Prevent the default form submission
+           // Serialize the form data
+           const formData = new FormData(this);
+
+           // Send an AJAX request to the server
+           $.ajax({
+               type: 'POST',
+               url: '/submit_contact_form',
+               processData: false,
+               contentType: false,
+               data: formData,
+               
+               success: function (response) {
+                   // Display the success message
+                   $('#myForm')[0].reset();
+                   Swal.fire(response)
+
+                   // Optionally, reset the form
+                  
+               },
+               error: function (error) {
+                   Swal.fire(error.responseText)
+               },
+           });
+       });
+   })
+</script>

@@ -1,0 +1,584 @@
+<%-include('partials/header')%>
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+.iframe-container{
+position: relative;
+width: 100%;
+padding-bottom: 56.25%;
+height: 0;
+}
+.iframe-container iframe{
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+</style>
+<!-- First Section -->
+<section class="relative bg-[#FBEFCE] pb-16 lg:h-[95%]">
+  <!-- <img src="public/images/bg-hero.svg" class="absolute -z-10  md:top-0 hidden lg:flex" id="bg-image">
+  <img src="public/images/mob-bg-hero.svg" class="absolute -z-10  md:top-0 lg:hidden" id="bg-image"> -->
+  <img src="../public/images/hsls1.svg" class="absolute left-10 top-10 lg:flex hidden">
+  <img src="../public/images/hsls2.svg" class="absolute top-10 lg:left-96 left-24 lg:flex hidden">
+  <img src="../public/images/hsls3.svg" class="absolute bottom-10 left-44 lg:flex hidden">
+  <img src="../public/images/hsls4.svg" class="absolute bottom-10 right-24 lg:flex hidden">
+  <img src="../public/images/hsls5.svg" class="absolute top-10 right-10 lg:flex hidden">
+  <img src="../public/images/hsls6.svg" class="absolute bottom-44 lg:left-96 lg:flex hidden">
+  <img src="../public/images/hsls7.svg" class="absolute bottom-10 lg:right-96 lg:flex hidden ">
+  <img src="../public/images/hsls8.svg" class="absolute top-24 lg:right-96 lg:flex hidden">
+  <img src="../public/images/hsls9.svg" class="absolute lg:top-44 lg:left-96 lg:flex hidden">
+  <img src="../public/images/gs_hero_circle.svg" class="absolute lg:-bottom-16 -bottom-12 lg:h-36 lg:w-36 h-24 w-24 lg:left-[45%] left-[38%]">
+  <div class=" z-10 w-[95%] mx-auto flex flex-row justify-around lg:pt-28 md:pt-20 pt-8 md:my-0  " >
+    <div class="md:w-[48%] w-[70%] " data-aos="fade-up">
+      <div class="w-fit bg-white md:p-2 p-1 rounded-lg">
+        <p class="md:text-xl text-sm">Never Stop Learning</p>
+      </div>
+      <div class="text-center">
+        <p class="text-[#B5820E] text-[15px] md:text-[30px] lg:text-[45px] font-roboto font-bold ">Grow up your skills
+          by online & offline courses with </p>
+          <p class="text-[#B5820E] text-[15px] md:text-[30px] lg:text-[45px] font-roboto font-bold">
+            <span class="typed "></span>
+          </p>
+          
+      </div>
+      <div class=" w-fit ">
+        <img src="public/images/stars.svg">
+      </div>
+    </div>
+    <div class="w-[45%] hidden lg:flex" data-aos="fade-up">
+      <img src="public/images/hersectionimg.svg">
+    </div>
+  </div>
+</section>
+<!-- Second Section -->
+<section class="my-24">
+    <h1 class="font-ralewey text-xl md:text-4xl  text-center">Organize Your own Learning
+        <br>Let the Journey Begin</h1>
+        <p class="text-center px-5 text-xs md:text-lg">Go to the section of your choice to learn anything on any topic</p>
+
+        <div class=" w-[80%] mx-auto flex flex-wrap lg:justify-between gap-y-10 mt-10 font-inter justify-center">
+          <a href="/iit_jee">
+            <div class="bg-[#FAECD5] flex flex-row justify-around p-1 rounded-lg lg:w-[30rem] w-[20rem] items-center" data-aos="fade-up">
+               <img src="public/images/jeeneeticon.svg" class="h-24 w-24">
+               <div class="flex flex-col">
+                  <h1 class="font-bold md:text-lg font-bold text-xs">JEE Mains (Class 11-12)</h1>
+                  <p class="text-xs md:text-lg">FREE CLASSES , LIVE CLASSES</p>
+               </div>
+               
+               <img src="public/images/right-arrow-icon.svg" class="h-4 w-4 md:h-auto md:w-auto">
+            </div>
+            </a>
+            <a href="/neet">
+              <div class="bg-[#FAECD5] flex flex-row justify-around p-1 rounded-lg lg:w-[30rem] w-[20rem] items-center" data-aos="fade-up">
+                <img src="public/images/jeeneeticon.svg" class="h-24 w-24">
+                <div class="flex flex-col">
+                   <h1 class="font-bold md:text-lg font-bold text-xs">Medical: NEET (Class 11-12)</h1>
+                   <p class="text-xs md:text-lg">FREE CLASSES , LIVE CLASSES</p>
+                </div>
+                
+                <img src="public/images/right-arrow-icon.svg" class="h-4 w-4 md:h-auto md:w-auto">
+             </div>
+             </a>
+             <a href="/arambh">
+              <div class="bg-[#FAECD5] flex flex-row justify-between  lg:px-5 px-2 rounded-lg lg:w-[30rem] w-[20rem] items-center" data-aos="fade-up">
+                <div class="flex flex-row space-x-5 items-center">
+                 <img src="public/images/foundatioicon.svg" class="h-24 w-24">
+                 <div class="flex flex-col">
+                    <h1 class="font-bold md:text-xl font-bold text-sm">Arambh – Foundation Course</h1>
+                    <p class="text-xs md:text-lg text-[#000000]">9-10th CLASS</p>
+                 </div>
+                </div>
+                
+                 <img src="public/images/right-arrow-icon.svg" class="h-4 w-4 md:h-auto md:w-auto">
+              </div>
+              </a>
+              <a href="/skill_development">
+                <div class="bg-[#FAECD5] flex flex-row justify-around p-1 rounded-lg lg:w-[30rem] w-[20rem] items-center" data-aos="fade-up">
+                  
+                   <img src="public/images/skillicon.svg" class="h-24 w-24">
+                   <div class="flex flex-col">
+                      <h1 class="font-bold md:text-lg  font-bold text-xs">Skill Development <br> (Cognitive and Non-Cognitive Skills)</h1>
+                      <p class="text-xs md:text-lg">ENGLISH ,FREELANCE , SKILL & IT </p>
+                   </div>
+                   <img src="public/images/right-arrow-icon.svg" class="h-4 w-4 md:h-auto md:w-auto">
+                </div>
+                </a>
+          <a href="/Lil_genius">
+            <div class="bg-[#FAECD5] flex flex-row justify-around p-1 rounded-lg lg:w-[30rem] w-[20rem] items-center" data-aos="fade-up">
+               <img src="public/images/book-icon.svg" class="h-24 w-24">
+               <div class="flex flex-col">
+                  <h1 class="font-bold md:text-lg font-bold text-xs">Li’l Genius Pre Foundation (Class 6 to 8)</h1>
+                  <p class="text-xs md:text-lg">FREE CLASSES , LIVE CLASSES</p>
+               </div>
+               
+               <img src="public/images/right-arrow-icon.svg" class="h-4 w-4 md:h-auto md:w-auto cursor-pointer">
+            </div>
+            </a>
+           
+            
+           
+          
+            <a href="#digitalskills">
+            <div class="bg-[#FAECD5] flex flex-row justify-between  lg:px-5 px-2 rounded-lg lg:w-[30rem] w-[20rem] items-center" data-aos="fade-up" id="#digitalskills">
+              <div class="flex flex-row space-x-5 items-center">
+               <img src="public/images/foundatioicon.svg" class="h-24 w-24">
+               <div class="flex flex-col">
+                  <h1 class="font-bold md:text-xl font-bold text-sm">Digital Skills</h1>
+                  <p class="text-xs md:text-lg text-[#000000]">Coming Soon..</p>
+               </div>
+              </div>
+              
+               <img src="public/images/right-arrow-icon.svg" class="h-4 w-4 md:h-auto md:w-auto">
+            </div>
+            </a>
+           
+        </div>
+</section>
+<!-- Third Section -->
+<!--Mobile View-->
+<section class="my-10 " data-aos="fade-up">
+  <div class="lg:hidden flex">
+    <div class="rankers-carousel owl-theme owl-carousel">
+        <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0 " id="card1">
+            <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Outstanding performers : JEE MAINS 2023</p></div>
+     
+           <div class="flex flex-row items-center lg:justify-around p-1 ">
+            <div class=" flex flex-wrap justify-between gap-2 w-full md:w-[70%] lg:w-[50%] mx-auto mt-16">
+              <% data.forEach(function(item) { %>
+                  <% if (item.standard === "IIT JEE") { %>
+                    <div class="bg-[#CC8CFF] w-24 h-24 lg:px-8 py-2 px-2 rounded-lg">
+                      <img src="<%=item.path%>" class="mx-auto   h-12  w-12">
+                      <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                      <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+                  </div>
+                  <% } else { %>
+                    
+                  <% } %>
+                
+              <% }); %>
+   
+   
+             </div>
+           </div>
+       </div>
+
+        <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0  ">
+            <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Outstanding performers : NEET 2023</p></div>
+        
+            <div class="flex flex-row items-center lg:justify-around p-1 ">
+              <div class=" flex flex-wrap justify-between gap-2 w-full md:w-[70%] lg:w-[50%] mx-auto mt-16">
+                <% data.forEach(function(item) { %>
+                    <% if (item.standard === "NEET") { %>
+                      <div class="bg-[#CC8CFF] w-24 h-24 lg:px-8 py-2 px-2 rounded-lg">
+                        <img src="<%=item.path%>" class="mx-auto   h-12  w-12">
+                        <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                        <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+                    </div>
+                    <% } else { %>
+                      
+                    <% } %>
+                  
+                <% }); %>
+     
+     
+               </div>
+            </div>
+        </div>
+
+        <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0 " id="card1">
+            <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Another Year Success Class 10: 2023</p></div>
+     
+           <div class="flex flex-row items-center lg:justify-around p-1 ">
+            <div class=" flex flex-wrap justify-between gap-2 w-full md:w-[70%] lg:w-[50%] mx-auto mt-16">
+              <% data.forEach(function(item) { %>
+                  <% if (item.standard === "HIGHSCHOOL") { %>
+                    <div class="bg-[#CC8CFF] w-24 h-24 lg:px-8 py-2 px-2 rounded-lg">
+                      <img src="<%=item.path%>" class="mx-auto   h-12  w-12">
+                      <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                      <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+                  </div>
+                  <% } else { %>
+                    
+                  <% } %>
+                
+              <% }); %>
+   
+   
+             </div>
+           </div>
+       </div>
+
+
+
+       <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0 " id="card1">
+        <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Another Year Success Class 12: 2023</p></div>
+ 
+       <div class="flex flex-row items-center lg:justify-around p-1 ">
+        <div class=" flex flex-wrap justify-between gap-2 w-full md:w-[70%] lg:w-[50%] mx-auto mt-16">
+          <% data.forEach(function(item) { %>
+              <% if (item.standard === "INTERMEDIATE") { %>
+                <div class="bg-[#CC8CFF] w-24 h-24 lg:px-8 py-2 px-2 rounded-lg">
+                  <img src="<%=item.path%>" class="mx-auto   h-12  w-12">
+                  <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                  <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+              </div>
+              <% } else { %>
+                
+              <% } %>
+            
+          <% }); %>
+
+
+         </div>
+       </div>
+   </div>
+</div>
+</div>
+<!--Desktop View-->
+<div class="lg:flex hidden">
+    <div class="rankers-carousel owl-theme owl-carousel">
+        <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0 " id="card1">
+            <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Outstanding performers : JEE MAINS 2023</p></div>
+     
+           <div class="flex flex-row items-center lg:justify-around p-1 ">
+               <div class=" flex flex-wrap gap-10 md:w-[70%] lg:w-[50%]  mt-16">
+                <% data.forEach(function(item) { %>
+                    <% if (item.standard === "IIT JEE") { %>
+                      <div class="bg-[#CC8CFF] w-44 h-44 lg:px-2 py-2 px-2 rounded-lg">
+                        <img src="<%=item.path%>" class="mx-auto   lg:h-24 lg:w-24">
+                        <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                        <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+                    </div>
+                    <% } else { %>
+                      
+                    <% } %>
+                  
+                <% }); %>
+     
+     
+               </div>
+               <div>
+                   <img src="../public/images/scholar-cap.svg" class="ranker-images" id="cap">
+               </div>
+           </div>
+       </div>
+
+        <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0  ">
+            <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Outstanding performers : NEET 2023</p></div>
+        
+            <div class="flex flex-row items-center lg:justify-around p-1 ">
+              <div class=" flex flex-wrap gap-10 md:w-[70%] lg:w-[50%]  mt-16">
+                <% data.forEach(function(item) { %>
+                    <% if (item.standard === "NEET") { %>
+                      <div class="bg-[#CC8CFF] w-44 h-44 lg:px-2 py-2 px-2 rounded-lg">
+                        <img src="<%=item.path%>" class="mx-auto   lg:h-24 lg:w-24">
+                        <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                        <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+                    </div>
+                    <% } else { %>
+                      
+                    <% } %>
+                  
+                <% }); %>
+     
+     
+               </div>
+                <div>
+                    <img src="../public/images/aala.svg" class=" " id="medal">
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0 " id="card1">
+            <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Another Year Success Class 10: 2023</p></div>
+     
+           <div class="flex flex-row items-center lg:justify-around p-1 ">
+            <div class=" flex flex-wrap gap-10 md:w-[70%] lg:w-[50%]  mt-16">
+              <% data.forEach(function(item) { %>
+                  <% if (item.standard === "HIGHSCHOOL") { %>
+                    <div class="bg-[#CC8CFF] w-44 h-44 lg:px-2 py-2 px-2 rounded-lg">
+                      <img src="<%=item.path%>" class="mx-auto   lg:h-24 lg:w-24">
+                      <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                      <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+                  </div>
+                  <% } else { %>
+                    
+                  <% } %>
+                
+              <% }); %>
+   
+   
+             </div>
+           </div>
+       </div>
+
+
+
+       <div class="lg:w-[95%] bg-[#F6F6F6] py-10 mx-auto px-1 lg:px-0 " id="card1">
+        <div class="bg-[#BCC4F8] rounded-lg p-2 mx-auto w-fit"><p class="text-center text-2xl font-bold">Another Year Success Class 12: 2023</p></div>
+ 
+       <div class="flex flex-row items-center lg:justify-around p-1 ">
+        <div class=" flex flex-wrap gap-10 md:w-[70%] lg:w-[50%]  mt-16">
+          <% data.forEach(function(item) { %>
+              <% if (item.standard === "INTERMEDIATE") { %>
+                <div class="bg-[#CC8CFF] w-44 h-44 lg:px-2 py-2 px-2 rounded-lg">
+                  <img src="<%=item.path%>" class="mx-auto   lg:h-24 lg:w-24">
+                  <h1 class="font-bold md:text-lg text-xs text-center  "><%=item.name%></h1>
+                  <p class="text-center font-bold text-xs md:text-lg "><%=item.rank%></p>
+              </div>
+              <% } else { %>
+                
+              <% } %>
+            
+          <% }); %>
+
+
+         </div>
+       </div>
+   </div>
+</div>
+</div>
+
+</section>
+<!-- Fourth Section -->
+<section class="bg-[#A9C9FE]">
+ <div class="flex items-center lg:gap-x-10 " >
+   <!-- First Div -->
+    <div class="lg:flex items-center w-[49%] hidden" data-aos="fade-up">
+       <img src="../public/images/atoz.svg" class=" w-72 h-72 ">
+       <div class="w-[50%] flex-col flex justify-center gap-y-6">
+         <img src="../public/images/gslogo.svg" class="w-36 h-36  lg:h-auto lg:w-auto" >
+         <p class="text-center text-xl font-semibold">Personalised learning app to learn anytime, anywhere</p>
+       <div class="flex justify-end">
+         <div class="bg-white w-fit px-4 py-2 rounded-lg">
+          <a href="/about">
+           <p>Explore Now</p>
+          </a>
+         </div>
+       </div>
+       </div>
+    </div>
+     
+    <div class="flex flex-col items-center w-[50%] p-2 lg:hidden"> 
+      <img src="../public/images/gslogo.svg" class=" h-36 w-36 ">
+      <img src="../public/images/atoz.svg" class=" h-36 w-36 " >
+      <p class="text-center text-md">Personalised learning app to learn anytime, anywhere</p>
+      <div class="bg-white w-fit px-4 py-2 rounded-lg">
+
+        <a href="/about">
+          <p>Explore Now</p>
+         </a>
+      </div>
+    </div>
+
+    <!-- End of first div -->
+    <div class="bg-white w-[1px] h-72  rounded-lg"> </div>
+    <div class="lg:flex items-center w-[49%]  justify-evenly hidden relative pb-12 " data-aos="fade-up">
+          <img src="../public/images/twlaptop.svg" class="h-72 w-72  ">
+          <div class="w-[50%] flex-col flex justify-center  ">
+                  <img src="../public/images/twlogo.svg" class="h-36 w-36">
+                  <p class="text-center text-xl font-semibold">Personalised online tutoring program with a unique two teacher model</p>
+                <div class="absolute bottom-8 right-10">
+                  <div class="bg-white w-fit px-4 py-2 rounded-lg mt-4">
+                    <a href="https://thinkwht.com" target="_blank"><p>Explore Now</p></a>
+                  </div>
+                </div>
+           </div>
+  </div>
+
+  <div class="flex flex-col items-center w-[50%] p-2 lg:hidden "> 
+      <img src="../public/images/twlogo.svg" class=" h-36 w-36 ">
+      <img src="../public/images/twlaptop.svg" class="h-36 w-36 ">
+      <p class="text-center text-md">Personalised online program to learn anytime, anywhere.</p>
+      <div class="bg-white w-fit px-4 py-2 rounded-lg">
+          <a href="https://thinkwht.com" target="_blank"> <p>Explore Now</p></a>
+      </div>
+    </div>
+ </div>
+
+</section>
+<!-- Fifth Section -->
+
+<section class="bg-[#FFE7D1] mt-24 " data-aos="fade-up">
+<div class="p-5 flex justify-around items-center md:flex-row flex-col ">
+ <div>
+   <img src="../public/images/boywithlaptop.svg">
+ </div>
+ <div class="md:w-[50%] flex flex-col gap-y-8">
+   <p class="lg:text-3xl text-2xl font-extrabold ">Welcome to  <span class="text-[#EBB12B] md:text-5xl text-2xl typed2"></span></p>
+   <p class="font-bold">IIT JEE, NEET, CUET, NTSE, NDA, Olympiad, Academics Class 6 to 12</p>
+   <p class="font-roboto-400">GyanSanchar, a pioneer coaching providing educational services in Online & Hybrid mode. We help to shape the career by providing righteous knowledge, Practice and healthy environment to aspirants of <b>IIT JEE, NEET, NDA, CUET, NTSE, Olympiad.</b>
+     GyanSanchar not only focus on academic but also bridge the gaps through interpersonal skill development.
+     <span class="font-bold">Download</span> our App <a href="https://play.google.com/store/apps/details?id=co.alexis.dlbdl" class="font-bold text-yellow-600 underline">GyanManthan</a> and attempt for <span class="font-bold">Scholarship Test </span> to win up to 100% Scholarship or click <a href="https://bit.ly/m/GS_Scholarship_Test?r=qr" class="underline font-bold text-yellow-600" target="_blank" > here </a>. GyanSanchar study pattern is based on the earlier age Gurukul system. Our gurus act as a mentor to each student and not only teach but also provide study plan for self-study.
+     </p>
+ </div>
+</div>
+</section>
+<!-- Sixth Section -->
+<section>
+  <p class="text-center font-bold text-4xl my-5 font-roboto">Video Tutorials</p>
+  <div class="lg:max-w-screen w-full flex lg:flex-row lg:justify-around flex-wrap  space-y-5 lg:space-y-0">
+      <div class="relative lg:w-[40%] p-2">
+          <iframe width="550" height="315" src="https://www.youtube.com/embed/videoseries?si=AjG-N8ZrXz12mHV0&amp;list=PL3lugEjt_UsNA6g78y1aGQXYUWd1WiNtQ"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:flex hidden"></iframe>
+          <iframe width="350" height="315" src="https://www.youtube.com/embed/videoseries?si=AjG-N8ZrXz12mHV0&amp;list=PL3lugEjt_UsNA6g78y1aGQXYUWd1WiNtQ"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:hidden flex mx-auto"></iframe>
+          <p class="text-2xl  font-bold my-2 w-full text-center lg:text-2xl">Class 12 | Physics Complete Revision | Board Exam 2023</p>
+      </div>
+      <div class="relative p-2  lg:w-[40%]">
+          <iframe width="550" height="315" src="https://www.youtube.com/embed/videoseries?si=G_Zq2SlI6j5eD60w&amp;list=PL3lugEjt_UsM6fNUuPit_GRVL06Us8sYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:flex hidden"></iframe>
+          <iframe width="350" height="315" src="https://www.youtube.com/embed/videoseries?si=G_Zq2SlI6j5eD60w&amp;list=PL3lugEjt_UsM6fNUuPit_GRVL06Us8sYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:hidden flex mx-auto"></iframe>
+          <p class=" w-full my-2 text-center font-bold text-2xl">Class 10 | MATHS Complete Revision | Board Exam 2023</p>
+      </div>
+  </div>
+  </section>
+<!--Seventh Section-->
+<section class="my-24" data-aos="fade-up">
+ <p class="text-4xl font-bold text-center font-ralewey">Get The Advantage</p>
+ <!-- <p class="text-center">Lorem ipsum dolor sit amet.</p> -->
+ <div class="flex justify-evenly items-center lg:flex-row flex-col">
+   <div class="flex flex-col  items-center">
+     <img src="../public/images/conceptual.svg" class="w-72 h-72">
+     <p class="text-2xl font-bold font-roboto mt-2">Conceptual Clarity</p>
+   </div>
+   <div class="flex flex-col items-center ">
+     <img src="../public/images/individuallearning.svg" class="h-72 w-72">
+     <p class="text-2xl font-bold font-roboto mt-2">Individual Attention</p>
+   </div>
+   <div class="flex flex-col items-center" class="">
+     <img src="../public/images/personalizedlearning.svg" class="w-72 h-72">
+     <p class="text-2xl font-bold font-roboto mt-2">Personalised Learning</p>
+   </div>
+ </div>
+</section>
+<!-- Eight'th Section -->
+<%-include('partials/course_caraousel')%>
+<!-- Skill Development COURSES -->
+ <section class="my-24">
+  <p class="md:text-5xl text-2xl font-bold text-center font-ralewey">SKILL DEVELOPMENT COURSES</p>
+  <!-- <p class="text-center text-xl text-[#8A8A8A]">Lorem ipsum dolor sit amet.</p> -->
+  <!-- Desktop View -->
+  <div class="justify-evenly flex lg:flex-row flex-col p-1 space-y-5 lg:space-y-0 mt-16">
+  <a href="https://dlbdl.on-app.in/app/oc/75686/dlbdl" target="_blank" class="lg:w-[25%] w-full ">
+   <img src="../public/images/vedicmath.svg" data-aos="fade-up" >
+  </a>
+  <a href="https://dlbdl.on-app.in/app/oc/103611/dlbdl" target="_blank" class="lg:w-[25%] w-full">
+   <img src="../public/images/mindmap.svg" data-aos="fade-up" >
+  </a>
+  <a class="lg:w-[25%] w-full" href="https://dlbdl.on-app.in/app/oc/101230/dlbdl" target="_blank">
+    <img src="../public/images/mat_card.svg" data-aos="fade-up" >
+  </a>
+  </div>
+</section>
+
+<section id="numbersection">
+  <div class="flex items-center justify-evenly md:flex-row flex-col my-5 w-[95%] mx-auto">
+      <div class="flex flex-wrap lg:w-[70%] lg:gap-10 w-full gap-5  justify-center">
+        <% number_data.forEach((element)=>{
+          %>
+          <div class=" bg-[<%=element.card_color%>] rounded-lg flex flex-col justify-center items-center lg:p-10 space-y-2 p-3 h-44 w-80">
+            <p class="font-extrabold lg:text-5xl text-2xl text-white font-inter"><%=element.cardnumber%></p> 
+            <p class="font-bold lg:text-xl text-xl text-white font-inter  w-full text-center "><%=element.cardtitle%></p>
+         </div>
+          <%
+      }) %>
+          
+      </div>
+      <div>
+          <img src="../public/images/homepagegirl.svg">
+      </div>
+  </div>
+</section>
+
+<section>
+  <div class="bg-[#FB888D] rounded-lg md:w-[80%] mx-auto md:mt-44 md:p-10 p-5 relative justify-evenly">
+    <div class="space-y-3">
+       <p class="text-white md:text-5xl font-extrabold">Install our app right now</p>
+       <div class="space-y-2 lg:w-[70%]">
+          <div class="flex items-start space-x-1">
+              <img src="../public/images/whitestar.svg">
+              <p class="text-white "><b>GyanManthan</b> is an online platform of GyanSanchar for managing all needs of student at one place in most efficient and transparent manner. 
+              </p>
+          </div>
+          <div class="flex items-start space-x-1">
+              <img src="../public/images/whitestar.svg">
+              <p class="text-white">It is a user-friendly app with amazing features like <b>Class schedules, Recorded lectures, Assignments, Online Test, Performance report</b> and much more...
+              </p>
+          </div>
+          <div class="flex items-start space-x-1">
+              <img src="../public/images/whitestar.svg">
+              <p class="text-white">Its  a perfect on- the- go solution for parents to know about their wards’ class details.  
+              </p>
+          </div>
+       </div>
+       <div class="bg-white w-fit p-3 rounded-lg">
+        <a href="/download_app">
+          <p class="text-[#0B7077]">Download Now</p>
+        </a>
+       </div>
+    </div>
+    <img src="../public/images/laughing_girl.svg" class="absolute right-1 bottom-0 h-96 w-96 hidden lg:flex">
+    
+  </div>
+  
+</section>
+
+
+ <script>
+  
+
+   
+   // owl carousel script
+
+   $(document).ready(function(){
+    $('.rankers-carousel').owlCarousel({
+       margin: 20,
+       loop: true,
+       autoplay: true,
+       autoplayTimeOut: 100,
+       autoplayHoverPause: true,
+       nav: false,
+       responsive: {
+           0:{
+               items: 1,
+           },
+           600:{
+               items: 1,
+           },
+           1000:{
+               items: 1,
+           }
+       }
+   });
+
+   
+})
+var typed = new Typed('.typed', {
+  strings: ["GyanSanchar"],
+  typeSpeed: 100,
+  showCursor: true,
+  loop: true
+});
+
+var typed2 = new Typed('.typed2', {
+  strings: ["GyanSanchar"],
+  typeSpeed: 100,
+  showCursor:true,
+  loop: true
+});
+   
+
+ </script>
+
+<%-include('partials/footer')%>
+ 

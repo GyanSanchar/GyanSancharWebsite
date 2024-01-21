@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+
+      <!-- tailwind CDN -->
+      <script src="https://cdn.tailwindcss.com"></script>
+
+       <!--font Poppins-->
+       <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+       <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+</head>
+<style>
+  body{
+    background-image: linear-gradient(to right,#FFE3AA, rgba(255,0,0,0));
+      font-family: 'Poppins';
+  }
+  .form{
+    background-image:linear-gradient(to right, #f8deae, #fdf0d7);
+  }
+  .placeholder{
+    background-color: #fdf0d7;
+  }
+ .login-btn{
+   background-color: #CC9B2B;
+ }
+</style>
+
+   <body>
+    <div class="md:flex flex-row md:pl-5 ">
+      
+        <div class="space-y-5 p-2 md:text-left lg:w-1/2 lg:mx-24 mx-12 lg:mx-0 md:mx-0">
+           
+<div class="h-96 w-96 mt-24 shadow-2xl rounded-lg form">        
+          <div id="errormessage"></div>
+      
+          <form class="mb-4 mt-12 m-8 justify-center" method="post">
+            <div class="mb-4 md:w-full">
+              <label for="email" class="block text-lg font-bold mb-1 pt-12">Login Id<b class="text-red-500">*</b></label>
+              <input class="w-full mt-2  pt-4 rounded-xl shadow-2xl p-2 border border-white placeholder" type="email" name="email" id="email" placeholder="">
+            </div>
+            <div class="mb-6 md:w-full">
+              <label for="password" class="block font-bold  text-lg mb-1 pt-4">Password<b class="text-red-500">*</b></label></label>
+              <input class="w-full mt-2  pt-4 rounded-xl shadow-2xl p-2 border border-white  placeholder" type="password" name="password" id="password" placeholder="">
+            </div>
+            <button class="login-btn text-white float-right text-sm font-semibold px-8 py-2 rounded mt-4">Login</button>
+          </form>
+            <p class="text-sm mt-56 text-slate-800">Copyright © 2020 All rights reserved.</p>
+        </div>
+          
+    
+           
+        </div>
+        <!--mockup GIRL-->
+          <div class="w-full lg:w-1/2">
+            <img src="../public/images/AP_login_box.svg" alt="" class="-ml-8 -mb-72 float-left">
+            <img src="../public/images/AP_login_girl.svg" alt=" image"   class="h-64 w-64 mx-auto md:mx-0 md:h-96 md:w-96 lg:h-[35rem] lg:w-[28rem]" />
+            <img src="../public/images/AP_login_250k.svg" alt="" class="-mt-16 px-24">
+          </div>
+
+     </div>
+  </body>
+  <script>
+    var message = '<%=message%>'
+    var status = '<%=status%>'
+    if(message !== '')
+    {
+        let color = 'bg-green-300'
+        let border_color ='green-400'
+        if(status==400)
+        {
+           color='bg-red-400'
+           border_color='red-500'
+        }
+                document.getElementById('errormessage').innerHTML=`<div class='${color} w-[45%] flex  px-2 py-1 rounded-lg border-2 justify-between border-${border_color} text-xl'>
+                    <p>${message}</p>
+                    <p id='closeerror' class="cursor-pointer">X</p>
+                    </div>`
+                document.getElementById('closeerror').addEventListener('click',()=>
+                {
+                    document.getElementById('errormessage').style.display='none'
+                })
+    }
+    
+</script>
+</html>

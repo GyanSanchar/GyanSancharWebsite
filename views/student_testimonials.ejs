@@ -1,0 +1,64 @@
+<%-include('partials/header')%>
+<div class="md:flex flex-row mt-4  md:pl-5 ">
+    <!-- left section -->  
+    <%-include('partials/admin_side_bar')%>
+    <!-- right section -->
+    <div class="mx-10">
+        <p class="text-center font-bold text-4xl my-5 font-roboto">STUDENT TESTIMONIALS</p>
+        <div class="text-2xl bg-green-400 border-2 border-green-600 w-fit mx-auto my-10 p-2" id="addStudentTestimonials">Add Student Testimonials +</div>
+        <div class="space-y-10 flex flex-wrap justify-center">
+        <% student_testimonials.forEach(element => { %>
+        
+            <div class="bg-red-200 p-5 rounded-lg flex flex-col justify-center">
+                <a href="/admin/delete_testimonials?id=<%=element._id%>" class="w-full">
+                 <button class="bg-red-400 border-2 border-red-600 text-2xl my-5">Delete</button>
+                </a>
+                <iframe width="550" height="315" src='<%=element.youtube_link%>'  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="lg:flex hidden"></iframe>
+                <p class="text-center font-bold">Title: <%=element.title%> </p>
+            </div>
+        
+         <%}) %>
+        </div>
+    </div>
+</div>
+
+<!--Modal-->
+<div id="contactUs" style=" background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))" class="w-[100vw] h-[100vh] flex justify-center items-center top-0 bg-[rgba(0, 0, 0, 0.25)] top-0 bottom-0 fixed overflow-y-scroll z-30
+  overflow-hidden hidden">
+      <div
+        class="lg:w-[70%] w-[95%] relative  m-3  gap-3 mx-auto bg-white top-auto  z-30  p-[1.5rem] rounded-[1.25rem] shadow-md "
+        id="contactUs">
+        <p class="absolute top-7 right-5 w-6 text-xl font-bold cursor-pointer" alt="cross icon" id="closeForm">X</p>
+
+          <div class="mt-5">
+            <form class="space-y-2 flex flex-col" method="post" action="/add_student_testimonials">
+                <label>Youtube Vedio Url</label>
+                <input type="text" class="p-2 border-2 border-gray-800" name="youtube_link">
+                <label>Title</label>
+                <input type="text" class="p-2 border-2 border-gray-800"  name="title">
+                <button class="bg-yellow-600 p-2 rounded-lg" type="submit">Add</button>
+            </form>
+          </div>
+
+
+
+      </div>
+    
+</div>
+
+<script>
+    $(document).ready(()=>
+    {
+        $("#addStudentTestimonials").click(()=>
+        {
+            $("#contactUs").show();
+        })
+        $("#closeForm").click(()=>
+        {
+            $("#contactUs").hide();
+        })
+
+    })
+</script>
+
+<%-include('partials/footer')%>

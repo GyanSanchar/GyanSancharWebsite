@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs:AP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/src/DefaultOptions.min.js"></script>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <input type="file" name="image" id="image">
+    </div>
+          <form method="post" action="/admin/add_more_page">
+            <label for="page_name">Page Name</label>
+            <input name="page_name" id="page_name">
+            <div>
+                <label for="msgg" class="block mb-2 text-lg text-black bold"
+                  >Description<b class="text-red-600">*</b></label>
+                  <div id="editor1">
+                  </div>
+                  <div id="editor2">
+                  </div>
+              </div>
+             
+                <input 
+                
+                 id="result" name="page_content">
+                <div>
+                    <button class="float-right text-black border-2 border-yellow-600 rounded-lg font-bold text-xl  py-2 px-10 mb-2" type="submit" onclick="logHtmlContent()">
+                      Submit
+                    </button>
+                  </div>
+          </form>
+         
+  </body>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="https://unpkg.com/quill-image-resize@3.0.9/image-resize.min.js"></script>
+  <script>
+    var toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+    ['blockquote', 'code-block'],
+  
+    [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+    [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+    [{ 'direction': 'rtl' }],                         // text direction
+  
+    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  
+    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+    [{ 'font': [] }],
+    [{ align: '' }, { align: 'center' }, { align: 'right' }, { align: 'justify' }],
+  
+    ['clean']   ,
+    ['image']
+                                          // remove formatting button
+  ];
+  
+  var quill = new Quill('#editor1', {
+    modules: {
+        imageResize: {
+          displaySize: true
+        },
+      toolbar: toolbarOptions,
+
+    },
+    theme: 'snow'
+  });
+  var quill = new Quill('#editor2', {
+    modules: {
+        imageResize: {
+          displaySize: true
+        },
+      toolbar: toolbarOptions,
+
+    },
+    theme: 'snow'
+  });
+  
+  function logHtmlContent() {
+      document.getElementById('result').value=quill.root.innerHTML
+      console.log(quill.root.innerHTML)
+    }
+
+  
+  </script>
+  </html>

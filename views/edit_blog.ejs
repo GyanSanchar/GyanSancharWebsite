@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs:AP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+  font-family: 'Noto Sans';
+}
+body{
+        font-family: 'Roboto';
+    }
+    
+body{
+  background:#FFE3AA;
+}
+/* text colors */
+.text-primary {
+  color: #275473;
+}
+
+.text-blueish {
+  color: #0962ea;
+}
+
+/* bg colors */
+.bg-primary {
+  background-color: #C77E2E;
+}
+
+.bg-avatar {
+  background-color: #d9d9d9;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+}
+
+/* border colors */
+.border-primary {
+  border-color: #FFCB00  ;
+}
+
+.border-menu {
+  border-color: #C77E2E;
+}
+
+/* sidebar styles */
+.side-navbar {
+  border-top: 5vw solid transparent;
+  border-left: 70px solid #FCF4DF;
+  
+  border-bottom: 5vw solid transparent;
+}
+  </style>
+<body>
+ 
+    <div class="blog h-52 w-full"> 
+      <div class="flex  justify-evenly">
+        <img src="images/Saly-26.png" alt="" class="hidden lg:block">
+        <button class="h-12 w-36 mt-16 text-white text-3xl rounded-full btn-blog"><a href="/admin/get_add_blog">Blogs</a></button>
+        <img src="images/Marni 4.png" alt="" class="hidden lg:block">
+      </div> 
+    </div>
+
+    <!--date-->
+    <div class="ml-4 lg:mx-12 "> 
+        <p class="text-sm"><%=blog_detail.date%></p>
+        <p class="text-2xl font-black md:text-4xl lg:text-6xl  mt-2"> <%=blog_detail.title%> </p>
+    </div>
+    <!--Images-->
+    <div class="mx-auto ml-4 mr-4 lg:mx-12  mt-4 text-justify bold">
+        <img src="<%=blog_detail.path%>"  alt=""> 
+        <p class="mt-4"> <%-blog_detail.description%> </p>
+       
+    </div>
+
+    <% blog_detail.comments.forEach(function(item) { %>
+      <div>
+            <div class="bg-gray-300 w-[80%] rounded-lg mx-auto p-5">
+                <div class="flex justify-between items-center">
+                    <p class="font-bold text-xl"><%=item.name%></p>
+                    <a href="/admin/delete_comment?comment_id=<%=item._id%>&blog_id=<%=blog_detail._id%>">
+                      <button class="bg-red-300 border-2 border-red-400 px-5 py-2 rounded-lg">Delete</button>
+                    </a>
+                    <a href="#">
+                      <button class="bg-yellow-300 border-2 border-green-400 px-5 py-2 rounded-lg">Status:<%=item.approved%></button>
+                    </a>
+                    <a href="/admin/update_comment?comment_id=<%=item._id%>&blog_id=<%=blog_detail._id%>">
+                        <button class="bg-green-300 border-2 border-green-400 px-5 py-2 rounded-lg">Approve</button>
+                      </a>
+                </div>
+                
+                <p><%=item.message%></p>
+            </div>
+      </div>
+    <% }); %>
+    <!--form -->
+   
+ 
+  </body>
+  </html>
+
+
+
+
+
